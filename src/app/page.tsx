@@ -227,7 +227,7 @@ export default function HomePage() {
                 size='lg'
                 className='h-12 rounded-full bg-zinc-950 px-6 text-white shadow-[0_18px_44px_rgba(10,20,16,0.22)] hover:bg-zinc-800'
               >
-                <Link href='#tu-van'>
+                <Link href='/intake'>
                   Mô tả ý tưởng của bạn
                   <Icons.arrowRight className='ml-2 size-4' />
                 </Link>
