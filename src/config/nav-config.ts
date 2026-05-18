@@ -54,6 +54,14 @@ export const navGroups: NavGroup[] = [
         items: []
       },
       {
+        title: 'Intake briefs',
+        url: '/dashboard/intake',
+        icon: 'forms',
+        shortcut: ['i', 'i'],
+        isActive: false,
+        items: []
+      },
+      {
         title: 'Concept demo',
         url: '/dashboard/product',
         icon: 'product',
