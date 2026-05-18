@@ -1,22 +1,22 @@
 import { NavGroup } from '@/types';
 
 /**
- * Navigation configuration with RBAC support
+ * Navigation configuration with workspace-aware access metadata
  *
  * This configuration is used for both the sidebar navigation and Cmd+K bar.
- * Items are organized into groups, each rendered with a SidebarGroupLabel.
+ * Items are grouped for the sidebar and Cmd+K surfaces.
  *
- * RBAC Access Control:
- * Each navigation item can have an `access` property that controls visibility
- * based on permissions, plans, features, roles, and organization context.
+ * Access metadata:
+ * Each navigation item can have an `access` property that controls client-side
+ * visibility based on permissions, plans, features, roles, and workspace context.
  *
  * Examples:
  *
- * 1. Require organization:
- *    access: { requireOrg: true }
+ * 1. Require workspace:
+ *    access: { requireWorkspace: true }
  *
  * 2. Require specific permission:
- *    access: { requireOrg: true, permission: 'org:teams:manage' }
+ *    access: { requireWorkspace: true, permission: 'workspace:teams:manage' }
  *
  * 3. Require specific plan:
  *    access: { plan: 'pro' }
@@ -28,7 +28,7 @@ import { NavGroup } from '@/types';
  *    access: { role: 'admin' }
  *
  * 6. Multiple conditions (all must be true):
- *    access: { requireOrg: true, permission: 'org:teams:manage', plan: 'pro' }
+ *    access: { requireWorkspace: true, permission: 'workspace:teams:manage', plan: 'pro' }
  *
  * Note: The `visible` function is deprecated but still supported for backward compatibility.
  * Use the `access` property for new items.
@@ -146,7 +146,7 @@ export const navGroups: NavGroup[] = [
         shortcut: ['b', 'b'],
         isActive: false,
         items: [],
-        access: { requireOrg: true }
+        access: { requireWorkspace: true }
       },
       {
         title: 'Trang chủ',

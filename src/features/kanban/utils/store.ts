@@ -44,7 +44,7 @@ const initialColumns: Record<string, Task[]> = {
     },
     {
       id: '9',
-      title: 'Audit RBAC permissions',
+      title: 'Audit workspace permissions',
       priority: 'medium',
       assignee: 'Jordan Kim',
       dueDate: '2026-04-10'

@@ -6,29 +6,29 @@ export const workspacesInfoContent: InfobarContent = {
     {
       title: 'Overview',
       description:
-        'The Workspaces page allows you to manage your workspaces and switch between them. This feature is powered by Clerk Organizations, which enables multi-tenant workspace management. You can view all available workspaces, create new ones, and switch your active workspace.',
+        'The Workspaces page is a Supabase-ready scaffold for tenant and team context. It can later connect to workspace tables, memberships and role assignments protected by Row Level Security.',
       links: [
         {
-          title: 'Clerk Organizations Documentation',
-          url: 'https://clerk.com/docs/organizations/overview'
+          title: 'Supabase Auth Documentation',
+          url: 'https://supabase.com/docs/guides/auth'
         }
       ]
     },
     {
       title: 'Creating Workspaces',
       description:
-        'To create a new workspace, click the "Create Organization" button. You will be prompted to enter a workspace name and configure initial settings. Once created, you can switch to the new workspace and start managing it.',
+        'Create a workspace record, attach members through a membership table and store role metadata for internal delivery teams or client-facing tenants.',
       links: [
         {
-          title: 'Multi-tenant Authentication Guide',
-          url: 'https://clerk.com/blog/how-to-build-multitenant-authentication-with-clerk'
+          title: 'Supabase Row Level Security',
+          url: 'https://supabase.com/docs/guides/database/postgres/row-level-security'
         }
       ]
     },
     {
       title: 'Switching Workspaces',
       description:
-        'You can switch between workspaces by clicking on a workspace in the list. The selected workspace becomes your active organization context, and all organization-specific features will use this workspace.',
+        'You can switch between workspaces by clicking on a workspace in the list. The selected workspace becomes the active tenant context for workspace-scoped features.',
       links: []
     },
     {
@@ -40,11 +40,11 @@ export const workspacesInfoContent: InfobarContent = {
     {
       title: 'Server-Side Permission Checks',
       description:
-        "This application follows Clerk's recommended patterns for multi-tenant authentication. Server-side permission checks ensure that users can only access resources for their active organization.",
+        'Use Supabase Row Level Security and server-side checks for resources that belong to a workspace. Client-side navigation filtering is only a UX helper.',
       links: [
         {
-          title: 'Clerk Organizations Documentation',
-          url: 'https://clerk.com/docs/organizations/overview'
+          title: 'Supabase Server-Side Auth',
+          url: 'https://supabase.com/docs/guides/auth/server-side/nextjs'
         }
       ]
     }
@@ -57,11 +57,11 @@ export const teamInfoContent: InfobarContent = {
     {
       title: 'Overview',
       description:
-        "The Team Management page allows you to manage your workspace team, including members, roles, security settings, and more. This page provides comprehensive organization management through Clerk's OrganizationProfile component.",
+        'The Team Management page is prepared for Supabase-backed member invites, role assignment and workspace access controls.',
       links: [
         {
-          title: 'Clerk Organizations Documentation',
-          url: 'https://clerk.com/docs/organizations/overview'
+          title: 'Supabase Auth Documentation',
+          url: 'https://supabase.com/docs/guides/auth'
         }
       ]
     },
@@ -74,30 +74,30 @@ export const teamInfoContent: InfobarContent = {
     {
       title: 'Roles and Permissions',
       description:
-        'Configure default roles and permissions in the Clerk Dashboard under Organizations settings. Roles define what actions team members can perform within the workspace. Common roles include admin, member, and custom roles you define.',
+        'Store roles in a workspace membership table and enforce access with Row Level Security policies. Common roles include admin, member and viewer.',
       links: [
         {
-          title: 'Clerk Organizations Documentation',
-          url: 'https://clerk.com/docs/organizations/overview'
+          title: 'Supabase Row Level Security',
+          url: 'https://supabase.com/docs/guides/database/postgres/row-level-security'
         }
       ]
     },
     {
       title: 'Security Settings',
       description:
-        "Manage security settings for your workspace, including authentication requirements, session management, and access controls. These settings help protect your organization's data and resources.",
+        'Manage security settings for your workspace, including authentication requirements, session management, and access controls. These settings help protect workspace data and resources.',
       links: []
     },
     {
-      title: 'Organization Settings',
+      title: 'Workspace Settings',
       description:
-        'Configure general organization settings such as name, logo, and other workspace preferences. These settings apply to the entire workspace and affect all team members.',
+        'Configure general workspace settings such as name, logo, and preferences. These settings apply to the entire workspace and affect all team members.',
       links: []
     },
     {
-      title: 'Navigation RBAC System',
+      title: 'Navigation Access System',
       description:
-        'The application includes a fully client-side navigation filtering system using the `useNav` hook. It supports `requireOrg`, `permission`, and `role` checks for instant access control. Navigation items are configured in `src/config/nav-config.ts` with `access` properties.',
+        'The application includes a fully client-side navigation filtering system using the `useNav` hook. It supports `requireWorkspace`, `permission`, and `role` checks for instant access control. Navigation items are configured in `src/config/nav-config.ts` with `access` properties.',
       links: []
     }
   ]
@@ -109,58 +109,58 @@ export const billingInfoContent: InfobarContent = {
     {
       title: 'Overview',
       description:
-        "The Billing page allows you to manage your organization's subscription and usage limits. Plans and subscriptions are managed through Clerk Billing for B2B, which provides organization-level subscription management with integrated Stripe payment processing.",
+        'The Billing page models VIETCODE AI service packages and is ready to connect to Stripe, Paddle or a Supabase-backed subscriptions table.',
       links: [
         {
-          title: 'Clerk Billing Documentation',
-          url: 'https://clerk.com/docs/billing/overview'
+          title: 'Stripe Billing Documentation',
+          url: 'https://docs.stripe.com/billing'
         }
       ]
     },
     {
       title: 'Available Plans',
       description:
-        'View and subscribe to available plans through the pricing table. Plans are created and managed in the Clerk Dashboard. Toggle "Publicly available" on plans to show them in the pricing table. Common plans include free, pro, and team tiers.',
+        'Show service packages for AI demos, implementation sprints and automation retainers. Persist selected package and billing status in your backend when pricing is finalized.',
       links: [
         {
-          title: 'Clerk Dashboard - Plans',
-          url: 'https://dashboard.clerk.com/~/billing/plans'
+          title: 'Supabase Database Documentation',
+          url: 'https://supabase.com/docs/guides/database/overview'
         }
       ]
     },
     {
       title: 'Plan Features',
       description:
-        'Each plan can include specific features that unlock functionality in the application. Features are added to plans in the Clerk Dashboard and can be checked in code using the `has()` function with `feature` checks.',
+        'Each package can unlock implementation scope, automation capacity or reporting features. Enforce access with server checks and database policies.',
       links: []
     },
     {
       title: 'Access Control',
       description:
-        'Plans and features are used for access control throughout the application. Server-side checks use the `has()` function to verify plan or feature access. Client-side protection uses the `<Protect>` component to conditionally render content based on subscription status.',
+        'Plan and feature checks should happen on the server and in Supabase policies. Client-side labels are only display state.',
       links: []
     },
     {
       title: 'Billing Cost Structure',
       description:
-        "Clerk Billing costs 0.7% per transaction, plus transaction fees paid directly to Stripe. Clerk Billing is not the same as Stripe Billing - plans and pricing are managed through the Clerk Dashboard and won't sync with existing Stripe products. Clerk uses Stripe only for payment processing.",
+        'Billing provider fees depend on the selected payment processor. Keep billing records separate from auth so Supabase Auth can remain the identity layer.',
       links: []
     },
     {
       title: 'Setup Requirements',
       description:
-        "To enable billing, navigate to Billing Settings in the Clerk Dashboard and enable billing for your application. Choose between Clerk's development gateway (for testing) or your own Stripe account (for production). Note: A Stripe account created for development cannot be used for production.",
+        'Connect a payment processor, create subscription records and mirror the active package into Supabase for authorization and reporting.',
       links: [
         {
-          title: 'Billing Settings',
-          url: 'https://dashboard.clerk.com/~/billing/settings'
+          title: 'Supabase Auth Helpers',
+          url: 'https://supabase.com/docs/guides/auth/server-side'
         }
       ]
     },
     {
-      title: 'Beta Status',
+      title: 'Implementation Status',
       description:
-        'Billing is currently in Beta and its APIs are experimental and may undergo breaking changes. To mitigate potential disruptions, we recommend pinning your SDK and `clerk-js` package versions.',
+        'This is a scaffold. Final billing requires provider webhooks, database persistence and server-side access checks.',
       links: []
     }
   ]

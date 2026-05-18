@@ -1,114 +1,119 @@
-import { buttonVariants } from '@/components/ui/button';
-import { GitHubStarsButton } from '@/components/github-stars-button';
-import { cn } from '@/lib/utils';
-import { SignIn as ClerkSignInForm } from '@clerk/nextjs';
-import { Metadata } from 'next';
+import { Icons } from '@/components/icons';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+import { signInWithPassword } from '@/features/auth/actions';
+import { isSupabaseConfigured } from '@/lib/supabase/config';
 import Link from 'next/link';
-import { InteractiveGridPattern } from './interactive-grid';
 
-export const metadata: Metadata = {
-  title: 'Authentication',
-  description: 'Authentication forms built using the components.'
-};
+interface SignInViewPageProps {
+  error?: string;
+  next?: string;
+}
 
-export default function SignInViewPage() {
+export default function SignInViewPage({ error, next }: SignInViewPageProps) {
+  const isDemoMode = !isSupabaseConfigured();
+
   return (
-    <div className='relative flex min-h-screen flex-col items-center justify-center overflow-hidden md:grid lg:max-w-none lg:grid-cols-2 lg:px-0'>
-      <Link
-        href='/examples/authentication'
-        className={cn(
-          buttonVariants({ variant: 'ghost' }),
-          'absolute top-4 right-4 hidden md:top-8 md:right-8'
-        )}
-      >
-        Login
-      </Link>
-      <div className='relative hidden h-full flex-col p-10 lg:flex dark:border-r'>
-        <div className='absolute inset-0 bg-sidebar' />
-        <div className='text-sidebar-foreground relative z-20 flex items-center text-lg font-medium'>
-          <svg
-            xmlns='http://www.w3.org/2000/svg'
-            viewBox='0 0 24 24'
-            fill='none'
-            stroke='currentColor'
-            strokeWidth='2'
-            strokeLinecap='round'
-            strokeLinejoin='round'
-            className='mr-2 h-6 w-6'
+    <main className='bg-background grid min-h-screen lg:grid-cols-[1.1fr_0.9fr]'>
+      <section className='relative hidden overflow-hidden border-r lg:block'>
+        <div className='absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(34,197,94,0.22),transparent_32%),radial-gradient(circle_at_80%_12%,rgba(20,184,166,0.18),transparent_30%),linear-gradient(135deg,#04120d,#0f172a_58%,#06130f)]' />
+        <div className='absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.08)_1px,transparent_1px)] bg-[size:64px_64px] opacity-30' />
+        <div className='relative z-10 flex h-full flex-col justify-between p-12 text-white'>
+          <Link
+            href='/'
+            className='flex items-center gap-3 text-sm font-semibold tracking-[0.24em]'
           >
-            <path d='M15 6v12a3 3 0 1 0 3-3H6a3 3 0 1 0 3 3V6a3 3 0 1 0-3 3h12a3 3 0 1 0-3-3' />
-          </svg>
-          Logo
-        </div>
-        <InteractiveGridPattern
-          className={cn(
-            'mask-[radial-gradient(400px_circle_at_center,white,transparent)]',
-            'inset-x-0 inset-y-[0%] h-full skew-y-12'
-          )}
-        />
-        <div className='text-sidebar-foreground relative z-20 mt-auto'>
-          <blockquote className='space-y-2'>
-            <p className='text-lg'>
-              &ldquo;This starter template has saved me countless hours of work and helped me
-              deliver projects to my clients faster than ever before.&rdquo;
+            <span className='flex size-9 items-center justify-center rounded-lg border border-white/20 bg-white/10 backdrop-blur'>
+              <Icons.sparkles className='size-4' />
+            </span>
+            VIETCODE AI
+          </Link>
+          <div className='max-w-xl space-y-7'>
+            <p className='text-sm uppercase tracking-[0.28em] text-emerald-200'>
+              Demo-first operations
             </p>
-            <footer className='text-sidebar-foreground/70 text-sm'>Random Dude</footer>
-          </blockquote>
-        </div>
-      </div>
-      <div className='flex h-full items-center justify-center p-4 lg:p-8'>
-        <div className='flex w-full max-w-md flex-col items-center justify-center space-y-6'>
-          {/* github link  */}
-          <GitHubStarsButton
-            owner='kiranism'
-            repo='next-shadcn-dashboard-starter'
-            showRepo
-            variant='outline'
-            size='default'
-          />
-          <ClerkSignInForm
-            initialValues={{
-              emailAddress: 'your_mail+clerk_test@example.com'
-            }}
-          />
-          <div className='text-muted-foreground space-y-2 px-8 text-center text-xs'>
-            <p>
-              This is an{' '}
-              <Link href='/about' className='hover:text-primary underline underline-offset-4'>
-                open-source project
-              </Link>{' '}
-              for demo purposes. Authentication is handled securely by Clerk.
+            <h1 className='text-5xl leading-[1.02] font-semibold tracking-tight'>
+              Chốt concept nhanh, triển khai bằng Supabase và Vercel.
+            </h1>
+            <p className='text-lg leading-8 text-white/70'>
+              Khu vực nội bộ quản lý lead, demo AI, pipeline triển khai và vận hành sau khi khách
+              duyệt concept.
             </p>
-            <p>
-              <Link
-                href='https://github.com/kiranism/next-shadcn-dashboard-starter'
-                target='_blank'
-                className='hover:text-primary underline underline-offset-4'
+          </div>
+          <div className='grid grid-cols-3 gap-3 text-sm text-white/70'>
+            {['Next.js', 'Supabase Auth', 'Vercel'].map((item) => (
+              <div
+                key={item}
+                className='rounded-lg border border-white/10 bg-white/8 p-3 backdrop-blur'
               >
-                View on GitHub
-              </Link>
+                {item}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section className='flex items-center justify-center px-6 py-12'>
+        <div className='w-full max-w-md space-y-8'>
+          <div className='space-y-3'>
+            <Link href='/' className='text-muted-foreground text-sm hover:text-foreground'>
+              VIETCODE AI
+            </Link>
+            <h2 className='text-3xl font-semibold tracking-tight'>Đăng nhập dashboard</h2>
+            <p className='text-muted-foreground leading-7'>
+              Dùng tài khoản Supabase Auth. Khi chưa cấu hình Supabase, form sẽ mở demo dashboard để
+              đội ngũ tiếp tục phát triển giao diện.
             </p>
           </div>
 
-          <p className='text-muted-foreground px-8 text-center text-sm'>
-            By clicking continue, you agree to our{' '}
-            <Link
-              href='/terms-of-service'
-              className='hover:text-primary underline underline-offset-4'
-            >
-              Terms of Service
-            </Link>{' '}
-            and{' '}
-            <Link
-              href='/privacy-policy'
-              className='hover:text-primary underline underline-offset-4'
-            >
-              Privacy Policy
+          {error && (
+            <div className='border-destructive/30 bg-destructive/10 text-destructive rounded-lg border px-4 py-3 text-sm'>
+              {error}
+            </div>
+          )}
+
+          {isDemoMode && (
+            <div className='rounded-lg border border-emerald-500/30 bg-emerald-500/10 px-4 py-3 text-sm text-emerald-700 dark:text-emerald-300'>
+              Supabase env vars chưa được đặt. Đăng nhập sẽ chuyển vào dashboard ở chế độ demo.
+            </div>
+          )}
+
+          <form action={signInWithPassword} className='space-y-5'>
+            <input type='hidden' name='next' value={next || '/dashboard/overview'} />
+            <div className='space-y-2'>
+              <Label htmlFor='email'>Email</Label>
+              <Input
+                id='email'
+                name='email'
+                type='email'
+                defaultValue='admin@vietcode.ai'
+                required
+              />
+            </div>
+            <div className='space-y-2'>
+              <Label htmlFor='password'>Mật khẩu</Label>
+              <Input
+                id='password'
+                name='password'
+                type='password'
+                defaultValue='vietcode-ai'
+                required
+              />
+            </div>
+            <Button type='submit' className='w-full'>
+              Đăng nhập
+              <Icons.arrowRight className='size-4' />
+            </Button>
+          </form>
+
+          <p className='text-muted-foreground text-center text-sm'>
+            Chưa có tài khoản?{' '}
+            <Link href='/auth/sign-up' className='text-foreground underline underline-offset-4'>
+              Tạo tài khoản
             </Link>
-            .
           </p>
         </div>
-      </div>
-    </div>
+      </section>
+    </main>
   );
 }

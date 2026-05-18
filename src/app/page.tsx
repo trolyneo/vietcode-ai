@@ -1,138 +1,178 @@
+import { Icons } from '@/components/icons';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Icons } from '@/components/icons';
 import Link from 'next/link';
 
-const offerings = [
+const levels = [
   {
-    title: 'Demo website bằng AI',
-    description:
-      'Khách mô tả ý tưởng, hệ thống tạo nhanh landing page, logo và concept ban đầu để chốt hướng.'
+    step: '01',
+    title: 'Mô tả ý tưởng',
+    text: 'Khách gửi ngành nghề, ưu đãi, chân dung khách hàng và phong cách mong muốn.'
   },
   {
-    title: 'Triển khai thật sau khi duyệt',
-    description:
-      'Đội ngũ VIETCODE AI biến concept thành website bán hàng, dashboard và automation chạy được thực tế.'
+    step: '02',
+    title: 'AI tạo demo',
+    text: 'Hệ thống dựng landing page, logo direction, màu sắc, layout và thông điệp chốt sale.'
   },
   {
-    title: 'Tối ưu để chốt hợp đồng',
-    description:
-      'Luồng sản phẩm đi từ demo -> báo giá -> triển khai -> vận hành, không chỉ dừng ở việc làm mẫu cho đẹp.'
+    step: '03',
+    title: 'Đội ngũ triển khai thật',
+    text: 'VIETCODE AI biến concept đã duyệt thành website, CRM lead, chatbot và automation.'
   }
 ];
 
-const packages = [
-  {
-    name: 'Starter',
-    target: 'Cá nhân / cửa hàng nhỏ',
-    items: ['Landing page responsive', 'Form liên hệ + hotline', 'Nội dung cơ bản để chạy ads']
-  },
-  {
-    name: 'Business',
-    target: 'Doanh nghiệp vừa và nhỏ',
-    items: ['Website nhiều trang', 'Logo + brand kit', 'CRM lead + chatbot + tracking']
-  },
-  {
-    name: 'Pro AI',
-    target: 'Đội ngũ muốn tự động hóa',
-    items: ['AI agent riêng', 'n8n workflow', 'Dashboard KPI và automation marketing']
-  }
+const deliverables = [
+  'Website / landing page bán hàng',
+  'Logo direction và brand kit nhanh',
+  'Dashboard quản lý lead, đơn hàng, chiến dịch',
+  'Supabase data layer, Vercel deployment',
+  'Chatbot, form tư vấn, tracking và automation'
 ];
+
+const stack = ['Next.js', 'Supabase', 'Vercel'];
 
 export default function Page() {
   return (
-    <main className='from-background via-background to-primary/5 min-h-screen bg-gradient-to-b'>
-      <section className='mx-auto flex max-w-7xl flex-col gap-10 px-6 py-16 lg:flex-row lg:items-center lg:py-24'>
-        <div className='max-w-3xl flex-1 space-y-6'>
-          <Badge variant='outline' className='gap-2 rounded-full px-4 py-1.5 text-sm'>
-            <Icons.sparkles className='size-4' />
-            VIETCODE AI - Website chốt hợp đồng bằng AI
-          </Badge>
-          <div className='space-y-4'>
-            <h1 className='max-w-4xl text-4xl font-semibold tracking-tight text-balance md:text-6xl'>
-              Bạn mô tả ý tưởng, AI dựng demo, đội ngũ VIETCODE AI triển khai thành hệ thống bán
-              hàng thật.
-            </h1>
-            <p className='text-muted-foreground max-w-2xl text-lg leading-8'>
-              Đây là nền tảng demo-first cho dịch vụ làm website, landing page, chatbot và
-              automation. Mục tiêu không chỉ là làm mẫu, mà là dùng AI để rút ngắn thời gian chốt
-              hợp đồng và đẩy nhanh triển khai.
-            </p>
-          </div>
-          <div className='flex flex-col gap-3 sm:flex-row'>
-            <Button asChild size='lg' className='rounded-full px-7'>
-              <Link href='/dashboard/overview'>Xem dashboard nội bộ</Link>
-            </Button>
-            <Button asChild size='lg' variant='outline' className='rounded-full px-7'>
-              <Link href='/about'>Xem mô hình triển khai</Link>
-            </Button>
-          </div>
-        </div>
+    <main className='min-h-screen overflow-hidden bg-[#06110d] text-white'>
+      <section className='relative min-h-[92vh] px-5 py-5 sm:px-8 lg:px-10'>
+        <div className='absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,rgba(52,211,153,0.28),transparent_28%),radial-gradient(circle_at_78%_0%,rgba(45,212,191,0.2),transparent_32%),linear-gradient(145deg,#06110d_0%,#0b1d17_42%,#111827_100%)]' />
+        <div className='absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.075)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.075)_1px,transparent_1px)] bg-[size:72px_72px] opacity-25' />
+        <div className='absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-[#06110d] to-transparent' />
 
-        <Card className='border-primary/10 w-full max-w-xl flex-1 shadow-lg'>
-          <CardHeader>
-            <CardDescription>Quy trình chốt hợp đồng</CardDescription>
-            <CardTitle className='text-2xl'>Từ mô tả ý tưởng đến website chạy thật</CardTitle>
-          </CardHeader>
-          <CardContent className='space-y-4'>
-            {[
-              'Khách nhập mô tả doanh nghiệp và mục tiêu bán hàng.',
-              'AI tạo landing page demo, logo, slogan và màu sắc ban đầu.',
-              'Khách chọn concept phù hợp, sau đó tư vấn gói triển khai.',
-              'Đội ngũ deploy website thật, gắn domain, SEO, CRM và chatbot.'
-            ].map((step, index) => (
-              <div key={step} className='flex gap-4 rounded-2xl border p-4'>
-                <div className='bg-primary/10 text-primary flex size-9 shrink-0 items-center justify-center rounded-full text-sm font-semibold'>
-                  0{index + 1}
-                </div>
-                <p className='text-sm leading-6'>{step}</p>
+        <div className='relative z-10 mx-auto flex max-w-7xl flex-col'>
+          <header className='flex items-center justify-between rounded-lg border border-white/10 bg-white/8 px-4 py-3 backdrop-blur-xl'>
+            <Link href='/' className='flex items-center gap-3'>
+              <span className='flex size-9 items-center justify-center rounded-lg bg-emerald-300 text-[#06110d]'>
+                <Icons.sparkles className='size-4' />
+              </span>
+              <span className='text-sm font-semibold tracking-[0.24em]'>VIETCODE AI</span>
+            </Link>
+            <div className='hidden items-center gap-2 md:flex'>
+              {stack.map((item) => (
+                <Badge
+                  key={item}
+                  variant='outline'
+                  className='border-white/15 bg-white/8 text-white/75'
+                >
+                  {item}
+                </Badge>
+              ))}
+            </div>
+            <Button
+              asChild
+              variant='secondary'
+              className='bg-white text-[#06110d] hover:bg-white/90'
+            >
+              <Link href='/dashboard/overview'>Dashboard</Link>
+            </Button>
+          </header>
+
+          <div className='grid min-h-[calc(92vh-88px)] items-center gap-12 py-16 lg:grid-cols-[1.05fr_0.95fr] lg:py-20'>
+            <div className='space-y-8'>
+              <Badge className='rounded-full bg-emerald-300 px-4 py-1.5 text-[#06110d] hover:bg-emerald-300'>
+                Demo nhanh cho website, landing page, logo và brand kit
+              </Badge>
+              <div className='space-y-6'>
+                <h1 className='max-w-5xl text-5xl leading-[0.98] font-semibold tracking-tight text-balance md:text-7xl'>
+                  Bạn mô tả ý tưởng, AI tạo demo, VIETCODE AI triển khai thành hệ thống bán hàng
+                  thật.
+                </h1>
+                <p className='max-w-2xl text-lg leading-8 text-white/70 md:text-xl'>
+                  Một trải nghiệm demo-first cho doanh nghiệp cần nhìn thấy concept trước khi đầu
+                  tư. AI rút ngắn vòng chốt ý tưởng, đội ngũ kỹ thuật hoàn thiện phần chạy thật:
+                  website, dữ liệu, automation và vận hành.
+                </p>
               </div>
-            ))}
-          </CardContent>
-        </Card>
-      </section>
+              <div className='flex flex-col gap-3 sm:flex-row'>
+                <Button
+                  asChild
+                  size='lg'
+                  className='bg-emerald-300 text-[#06110d] hover:bg-emerald-200'
+                >
+                  <Link href='/auth/sign-in'>
+                    Vào hệ thống demo
+                    <Icons.arrowRight className='size-4' />
+                  </Link>
+                </Button>
+                <Button
+                  asChild
+                  size='lg'
+                  variant='outline'
+                  className='border-white/20 bg-white/8 text-white hover:bg-white/14 hover:text-white'
+                >
+                  <Link href='/dashboard/product'>Xem concept demo</Link>
+                </Button>
+              </div>
+            </div>
 
-      <section className='mx-auto grid max-w-7xl gap-5 px-6 pb-8 md:grid-cols-3'>
-        {offerings.map((item) => (
-          <Card key={item.title} className='border-border/60'>
-            <CardHeader>
-              <CardTitle className='text-xl'>{item.title}</CardTitle>
-              <CardDescription className='text-base leading-7'>{item.description}</CardDescription>
-            </CardHeader>
-          </Card>
-        ))}
-      </section>
+            <div className='relative'>
+              <div className='absolute -inset-6 rounded-[2rem] border border-emerald-300/20 bg-emerald-300/8 blur-2xl' />
+              <div className='relative rounded-xl border border-white/12 bg-white/10 p-4 shadow-2xl shadow-black/30 backdrop-blur-2xl'>
+                <div className='rounded-lg border border-white/10 bg-[#07140f]/82 p-5'>
+                  <div className='flex items-center justify-between gap-4 border-b border-white/10 pb-4'>
+                    <div>
+                      <p className='text-xs uppercase tracking-[0.24em] text-emerald-200'>
+                        AI demo pipeline
+                      </p>
+                      <h2 className='mt-2 text-2xl font-semibold'>Concept đang được dựng</h2>
+                    </div>
+                    <div className='rounded-lg bg-emerald-300 px-3 py-2 text-sm font-semibold text-[#06110d]'>
+                      14 phút
+                    </div>
+                  </div>
 
-      <section className='mx-auto max-w-7xl px-6 py-10'>
-        <div className='mb-6 flex items-end justify-between gap-4'>
-          <div>
-            <p className='text-primary text-sm font-medium uppercase tracking-[0.22em]'>
-              Gói dịch vụ
-            </p>
-            <h2 className='mt-2 text-3xl font-semibold tracking-tight'>
-              Chốt đúng nhu cầu, triển khai đúng bài
-            </h2>
+                  <div className='mt-5 space-y-3'>
+                    {levels.map((level) => (
+                      <div
+                        key={level.step}
+                        className='grid gap-4 rounded-lg border border-white/10 bg-white/7 p-4 sm:grid-cols-[48px_1fr]'
+                      >
+                        <div className='flex size-12 items-center justify-center rounded-lg bg-white text-sm font-semibold text-[#06110d]'>
+                          {level.step}
+                        </div>
+                        <div>
+                          <h3 className='font-semibold'>{level.title}</h3>
+                          <p className='mt-1 text-sm leading-6 text-white/65'>{level.text}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className='mt-5 rounded-lg border border-emerald-300/20 bg-emerald-300/10 p-4'>
+                    <p className='text-sm font-medium text-emerald-100'>Output sau khi duyệt</p>
+                    <div className='mt-3 flex flex-wrap gap-2'>
+                      {deliverables.map((item) => (
+                        <span
+                          key={item}
+                          className='rounded-full border border-white/10 bg-white/8 px-3 py-1 text-xs text-white/72'
+                        >
+                          {item}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div className='grid gap-5 lg:grid-cols-3'>
-          {packages.map((item) => (
-            <Card key={item.name} className='border-border/60'>
-              <CardHeader>
-                <CardDescription>{item.target}</CardDescription>
-                <CardTitle className='text-2xl'>{item.name}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <ul className='space-y-3 text-sm leading-6'>
-                  {item.items.map((feature) => (
-                    <li key={feature} className='flex gap-3'>
-                      <Icons.check className='text-primary mt-0.5 size-4 shrink-0' />
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
+      </section>
+
+      <section className='px-5 pb-18 sm:px-8 lg:px-10'>
+        <div className='mx-auto grid max-w-7xl gap-4 md:grid-cols-3'>
+          {[
+            ['Website demos', 'Tạo mẫu nhanh để khách thấy hướng nội dung, bố cục và offer.'],
+            ['Brand kit demos', 'Logo direction, màu sắc, typography và phong cách truyền thông.'],
+            ['Real builds', 'Kết nối Supabase, triển khai Vercel và bàn giao hệ thống dùng thật.']
+          ].map(([title, text]) => (
+            <div
+              key={title}
+              className='rounded-lg border border-white/10 bg-white/7 p-6 backdrop-blur'
+            >
+              <Icons.circleCheck className='mb-5 size-5 text-emerald-300' />
+              <h2 className='text-xl font-semibold'>{title}</h2>
+              <p className='mt-3 text-sm leading-7 text-white/62'>{text}</p>
+            </div>
           ))}
         </div>
       </section>
