@@ -5,9 +5,21 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
+import {
+  initialIntakeSubmissionState,
+  submitIntakeBrief,
+  type IntakeSubmissionState
+} from '@/features/intake/actions';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
-import { useMemo, useState, type ChangeEvent, type FormEvent, type ReactNode } from 'react';
+import {
+  useActionState,
+  useEffect,
+  useMemo,
+  useState,
+  type ChangeEvent,
+  type ReactNode
+} from 'react';
 
 const steps = [
   {
@@ -97,6 +109,39 @@ function PromptItem({ children }: { children: ReactNode }) {
 
 function FieldHint({ children }: { children: ReactNode }) {
   return <p className='mt-2 text-xs leading-5 text-zinc-500'>{children}</p>;
+}
+
+function SubmissionNotice({ state }: { state: IntakeSubmissionState }) {
+  if (state.status === 'idle') {
+    return null;
+  }
+
+  const palette =
+    state.status === 'error'
+      ? 'border-rose-500/20 bg-rose-500/10 text-rose-950'
+      : state.status === 'success'
+        ? 'border-emerald-500/20 bg-emerald-500/10 text-emerald-950'
+        : 'border-amber-500/20 bg-amber-500/10 text-amber-950';
+
+  const icon = state.status === 'error' ? Icons.close : Icons.check;
+  const Icon = icon;
+
+  return (
+    <div className={cn('rounded-2xl border p-5', palette)}>
+      <div className='flex items-start gap-3'>
+        <span className='mt-0.5 inline-flex size-8 shrink-0 items-center justify-center rounded-full bg-white/45'>
+          <Icon className='size-4' />
+        </span>
+        <div>
+          <p className='font-semibold'>{state.title}</p>
+          <p className='mt-2 text-sm leading-6 opacity-85'>{state.message}</p>
+          {state.reference ? (
+            <p className='mt-3 text-sm font-medium'>Mã brief: {state.reference}</p>
+          ) : null}
+        </div>
+      </div>
+    </div>
+  );
 }
 
 function TextField({
@@ -217,7 +262,16 @@ function SelectField({
 
 export function IntakePageClient() {
   const [formState, setFormState] = useState<FormState>(initialFormState);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [submissionState, formAction, isPending] = useActionState(
+    submitIntakeBrief,
+    initialIntakeSubmissionState
+  );
+
+  useEffect(() => {
+    if (submissionState.status === 'success' || submissionState.status === 'demo') {
+      setFormState(initialFormState);
+    }
+  }, [submissionState.status]);
 
   const summary = useMemo(() => {
     return [formState.businessName, formState.industry, formState.goals]
@@ -243,14 +297,8 @@ export function IntakePageClient() {
     }));
   };
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    setIsSubmitted(true);
-  };
-
   const handleReset = () => {
     setFormState(initialFormState);
-    setIsSubmitted(false);
   };
 
   return (
@@ -383,7 +431,7 @@ export function IntakePageClient() {
               </span>
             </div>
 
-            <form className='mt-8 grid gap-6' onSubmit={handleSubmit}>
+            <form className='mt-8 grid gap-6' action={formAction}>
               <div className='grid gap-6 md:grid-cols-2'>
                 <TextField
                   id='businessName'
@@ -499,31 +547,16 @@ export function IntakePageClient() {
                 </p>
               </div>
 
-              {isSubmitted ? (
-                <div className='rounded-2xl border border-emerald-500/20 bg-emerald-500/10 p-5 text-emerald-950'>
-                  <div className='flex items-start gap-3'>
-                    <span className='mt-0.5 inline-flex size-8 shrink-0 items-center justify-center rounded-full bg-emerald-500/15 text-emerald-700'>
-                      <Icons.check className='size-4' />
-                    </span>
-                    <div>
-                      <p className='font-semibold'>Brief demo đã sẵn sàng để xử lý nội bộ.</p>
-                      <p className='mt-2 text-sm leading-6 text-emerald-900/80'>
-                        Hiện đây là flow demo-safe nên dữ liệu chưa gửi ra backend. Nhưng toàn bộ
-                        nội dung đã được gom đủ để bước tiếp theo nối vào Supabase hoặc CRM intake
-                        thật.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              ) : null}
+              <SubmissionNotice state={submissionState} />
 
               <div className='flex flex-col gap-3 sm:flex-row sm:items-center'>
                 <Button
                   type='submit'
                   size='lg'
-                  className='h-12 rounded-full bg-zinc-950 px-6 text-white shadow-[0_18px_44px_rgba(10,20,16,0.16)] hover:bg-zinc-800'
+                  disabled={isPending}
+                  className='h-12 rounded-full bg-zinc-950 px-6 text-white shadow-[0_18px_44px_rgba(10,20,16,0.16)] hover:bg-zinc-800 disabled:cursor-not-allowed disabled:opacity-70'
                 >
-                  Gửi brief demo
+                  {isPending ? 'Đang xử lý brief...' : 'Gửi brief demo'}
                   <Icons.arrowRight className='ml-2 size-4' />
                 </Button>
                 <Button
