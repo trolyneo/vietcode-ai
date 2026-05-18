@@ -16,8 +16,8 @@ const META_THEME_COLORS = {
 };
 
 export const metadata: Metadata = {
-  title: 'Next Shadcn',
-  description: 'Basic dashboard with Next.js and Shadcn'
+  title: 'VIETCODE AI',
+  description: 'Nen tang demo website bang AI va dashboard van hanh du an cho VIETCODE AI'
 };
 
 export const viewport: Viewport = {

@@ -1,41 +1,36 @@
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import { Card, CardHeader, CardContent, CardTitle, CardDescription } from '@/components/ui/card';
 
 const salesData = [
   {
-    name: 'Olivia Martin',
-    email: 'olivia.martin@email.com',
-    avatar: 'https://api.slingacademy.com/public/sample-users/1.png',
-    fallback: 'OM',
-    amount: '+$1,999.00'
+    name: 'Nha khoa Minh Anh',
+    email: 'demo landing page + chatbot',
+    fallback: 'MA',
+    amount: 'Business'
   },
   {
-    name: 'Jackson Lee',
-    email: 'jackson.lee@email.com',
-    avatar: 'https://api.slingacademy.com/public/sample-users/2.png',
-    fallback: 'JL',
-    amount: '+$39.00'
+    name: 'Spa Lamer',
+    email: 'logo + landing page + booking form',
+    fallback: 'SL',
+    amount: 'Starter'
   },
   {
-    name: 'Isabella Nguyen',
-    email: 'isabella.nguyen@email.com',
-    avatar: 'https://api.slingacademy.com/public/sample-users/3.png',
-    fallback: 'IN',
-    amount: '+$299.00'
+    name: 'Trung tâm IELTS Nova',
+    email: 'website nhiều trang + CRM lead',
+    fallback: 'NV',
+    amount: 'Pro AI'
   },
   {
-    name: 'William Kim',
-    email: 'will@email.com',
-    avatar: 'https://api.slingacademy.com/public/sample-users/4.png',
-    fallback: 'WK',
-    amount: '+$99.00'
+    name: 'Nội thất Gỗ Việt',
+    email: 'catalog website + báo giá nhanh',
+    fallback: 'GV',
+    amount: 'Business'
   },
   {
-    name: 'Sofia Davis',
-    email: 'sofia.davis@email.com',
-    avatar: 'https://api.slingacademy.com/public/sample-users/5.png',
-    fallback: 'SD',
-    amount: '+$39.00'
+    name: 'Phòng khám Aster',
+    email: 'concept đã duyệt, chờ lịch tư vấn',
+    fallback: 'AS',
+    amount: 'Follow-up'
   }
 ];
 
@@ -43,15 +38,16 @@ export function RecentSales() {
   return (
     <Card className='h-full'>
       <CardHeader>
-        <CardTitle>Recent Sales</CardTitle>
-        <CardDescription>You made 265 sales this month.</CardDescription>
+        <CardTitle>Lead đáng chú ý</CardTitle>
+        <CardDescription>
+          Các khách hàng đang ở gần điểm chốt nhất trong pipeline hiện tại.
+        </CardDescription>
       </CardHeader>
       <CardContent>
         <div className='space-y-8'>
-          {salesData.map((sale, index) => (
-            <div key={index} className='flex items-center'>
+          {salesData.map((sale) => (
+            <div key={sale.name} className='flex items-center'>
               <Avatar className='h-9 w-9'>
-                <AvatarImage src={sale.avatar} alt='Avatar' />
                 <AvatarFallback>{sale.fallback}</AvatarFallback>
               </Avatar>
               <div className='ml-4 space-y-1'>

@@ -35,10 +35,10 @@ import { NavGroup } from '@/types';
  */
 export const navGroups: NavGroup[] = [
   {
-    label: 'Overview',
+    label: 'Điều hành',
     items: [
       {
-        title: 'Dashboard',
+        title: 'Tổng quan',
         url: '/dashboard/overview',
         icon: 'dashboard',
         isActive: false,
@@ -46,30 +46,7 @@ export const navGroups: NavGroup[] = [
         items: []
       },
       {
-        title: 'Workspaces',
-        url: '/dashboard/workspaces',
-        icon: 'workspace',
-        isActive: false,
-        items: []
-      },
-      {
-        title: 'Teams',
-        url: '/dashboard/workspaces/team',
-        icon: 'teams',
-        isActive: false,
-        items: [],
-        access: { requireOrg: true }
-      },
-      {
-        title: 'Product',
-        url: '/dashboard/product',
-        icon: 'product',
-        shortcut: ['p', 'p'],
-        isActive: false,
-        items: []
-      },
-      {
-        title: 'Users',
+        title: 'Lead & tư vấn',
         url: '/dashboard/users',
         icon: 'teams',
         shortcut: ['u', 'u'],
@@ -77,7 +54,15 @@ export const navGroups: NavGroup[] = [
         items: []
       },
       {
-        title: 'Kanban',
+        title: 'Concept demo',
+        url: '/dashboard/product',
+        icon: 'product',
+        shortcut: ['p', 'p'],
+        isActive: false,
+        items: []
+      },
+      {
+        title: 'Pipeline triển khai',
         url: '/dashboard/kanban',
         icon: 'kanban',
         shortcut: ['k', 'k'],
@@ -85,7 +70,7 @@ export const navGroups: NavGroup[] = [
         items: []
       },
       {
-        title: 'Chat',
+        title: 'Trao đổi nội bộ',
         url: '/dashboard/chat',
         icon: 'chat',
         shortcut: ['c', 'c'],
@@ -95,102 +80,79 @@ export const navGroups: NavGroup[] = [
     ]
   },
   {
-    label: 'Elements',
+    label: 'Vận hành',
     items: [
       {
-        title: 'Forms',
+        title: 'Workspace',
+        url: '/dashboard/workspaces',
+        icon: 'workspace',
+        isActive: false,
+        items: []
+      },
+      {
+        title: 'Biểu mẫu',
         url: '#',
         icon: 'forms',
         isActive: true,
         items: [
           {
-            title: 'Basic Form',
+            title: 'Form cơ bản',
             url: '/dashboard/forms/basic',
             icon: 'forms',
             shortcut: ['f', 'f']
           },
           {
-            title: 'Multi-Step Form',
+            title: 'Form nhiều bước',
             url: '/dashboard/forms/multi-step',
             icon: 'forms'
           },
           {
-            title: 'Sheet & Dialog',
+            title: 'Sheet & dialog',
             url: '/dashboard/forms/sheet-form',
             icon: 'forms'
           },
           {
-            title: 'Advanced Patterns',
+            title: 'Mẫu nâng cao',
             url: '/dashboard/forms/advanced',
             icon: 'forms'
           }
         ]
       },
       {
-        title: 'React Query',
-        url: '/dashboard/react-query',
-        icon: 'code',
-        isActive: false,
-        items: []
-      },
-      {
-        title: 'Icons',
-        url: '/dashboard/elements/icons',
-        icon: 'palette',
+        title: 'Thông báo',
+        url: '/dashboard/notifications',
+        icon: 'notification',
+        shortcut: ['n', 'n'],
         isActive: false,
         items: []
       }
     ]
   },
   {
-    label: '',
+    label: 'Tài khoản',
     items: [
       {
-        title: 'Pro',
-        url: '#',
-        icon: 'pro',
-        isActive: true,
-        items: [
-          {
-            title: 'Exclusive',
-            url: '/dashboard/exclusive',
-            icon: 'exclusive',
-            shortcut: ['e', 'e']
-          }
-        ]
+        title: 'Hồ sơ',
+        url: '/dashboard/profile',
+        icon: 'profile',
+        shortcut: ['m', 'm'],
+        isActive: false,
+        items: []
       },
       {
-        title: 'Account',
-        url: '#',
-        icon: 'account',
-        isActive: true,
-        items: [
-          {
-            title: 'Profile',
-            url: '/dashboard/profile',
-            icon: 'profile',
-            shortcut: ['m', 'm']
-          },
-          {
-            title: 'Notifications',
-            url: '/dashboard/notifications',
-            icon: 'notification',
-            shortcut: ['n', 'n']
-          },
-          {
-            title: 'Billing',
-            url: '/dashboard/billing',
-            icon: 'billing',
-            shortcut: ['b', 'b'],
-            access: { requireOrg: true }
-          },
-          {
-            title: 'Login',
-            shortcut: ['l', 'l'],
-            url: '/',
-            icon: 'login'
-          }
-        ]
+        title: 'Billing',
+        url: '/dashboard/billing',
+        icon: 'billing',
+        shortcut: ['b', 'b'],
+        isActive: false,
+        items: [],
+        access: { requireOrg: true }
+      },
+      {
+        title: 'Trang chủ',
+        shortcut: ['l', 'l'],
+        url: '/',
+        icon: 'login'
       }
     ]
   }
