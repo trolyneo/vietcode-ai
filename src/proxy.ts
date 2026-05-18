@@ -1,11 +1,25 @@
 import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server';
-import { NextRequest } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 
 const isProtectedRoute = createRouteMatcher(['/dashboard(.*)']);
+const hasClerk = Boolean(process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY);
 
-export default clerkMiddleware(async (auth, req: NextRequest) => {
-  if (isProtectedRoute(req)) await auth.protect();
-});
+const fallbackMiddleware = (req: NextRequest) => {
+  if (isProtectedRoute(req)) {
+    const signInUrl = new URL('/auth/sign-in', req.url);
+    signInUrl.searchParams.set('redirect_url', req.url);
+    return NextResponse.redirect(signInUrl);
+  }
+
+  return NextResponse.next();
+};
+
+export default hasClerk
+  ? clerkMiddleware(async (auth, req: NextRequest) => {
+      if (isProtectedRoute(req)) await auth.protect();
+    })
+  : fallbackMiddleware;
+
 export const config = {
   matcher: [
     // Skip Next.js internals and all static files, unless found in search params
