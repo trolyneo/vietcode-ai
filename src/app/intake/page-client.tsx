@@ -116,14 +116,15 @@ function SubmissionNotice({ state }: { state: IntakeSubmissionState }) {
     return null;
   }
 
-  const palette =
-    state.status === 'error'
-      ? 'border-rose-500/20 bg-rose-500/10 text-rose-950'
-      : state.status === 'success'
-        ? 'border-emerald-500/20 bg-emerald-500/10 text-emerald-950'
-        : 'border-amber-500/20 bg-amber-500/10 text-amber-950';
+  const isError = state.status === 'error';
+  const isSuccess = state.status === 'success';
+  const palette = isError
+    ? 'border-rose-500/20 bg-rose-500/10 text-rose-950'
+    : isSuccess
+      ? 'border-emerald-500/20 bg-emerald-500/10 text-emerald-950'
+      : 'border-amber-500/20 bg-amber-500/10 text-amber-950';
 
-  const icon = state.status === 'error' ? Icons.close : Icons.check;
+  const icon = isError ? Icons.close : Icons.check;
   const Icon = icon;
 
   return (
@@ -132,11 +133,36 @@ function SubmissionNotice({ state }: { state: IntakeSubmissionState }) {
         <span className='mt-0.5 inline-flex size-8 shrink-0 items-center justify-center rounded-full bg-white/45'>
           <Icon className='size-4' />
         </span>
-        <div>
+        <div className='flex-1'>
           <p className='font-semibold'>{state.title}</p>
           <p className='mt-2 text-sm leading-6 opacity-85'>{state.message}</p>
           {state.reference ? (
             <p className='mt-3 text-sm font-medium'>Mã brief: {state.reference}</p>
+          ) : null}
+
+          {!isError ? (
+            <div className='mt-4 rounded-xl border border-current/15 bg-white/35 p-4'>
+              <p className='text-sm font-semibold'>Bước tiếp theo</p>
+              <div className='mt-3 grid gap-2 text-sm leading-6 opacity-90'>
+                <p>1. Đội ngũ đọc brief và chấm độ rõ của offer, audience, mục tiêu.</p>
+                <p>2. AI dựng concept demo đầu tiên để chốt hướng nhanh.</p>
+                <p>3. Sau khi concept đúng, VIETCODE AI triển khai website và hệ thống thật.</p>
+              </div>
+              <div className='mt-4 flex flex-col gap-3 sm:flex-row'>
+                <Button asChild size='sm' className='bg-zinc-950 text-white hover:bg-zinc-800'>
+                  <Link href='/dashboard/intake'>
+                    <Icons.forms className='mr-2 size-4' />
+                    Xem intake dashboard
+                  </Link>
+                </Button>
+                <Button asChild size='sm' variant='outline' className='bg-white/80'>
+                  <Link href='/'>
+                    <Icons.arrowRight className='mr-2 size-4' />
+                    Quay về landing
+                  </Link>
+                </Button>
+              </div>
+            </div>
           ) : null}
         </div>
       </div>
