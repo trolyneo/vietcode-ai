@@ -19,83 +19,83 @@ const navigationItems = [
 
 const credibilityItems = [
   'Demo trước khi chốt phạm vi',
-  'Có đội triển khai thật sau lớp AI',
+  'Đội triển khai thật sau lớp AI',
   'Bàn giao để vận hành và mở rộng'
 ];
 
 const painPoints = [
   {
-    title: 'Ý tưởng hay nhưng khó hình dung',
+    title: 'Ý tưởng có tiềm năng nhưng quá khó nhìn thấy sớm',
     description:
-      'Trao đổi bằng vài dòng mô tả hoặc slide khiến hai bên mất nhiều vòng để thống nhất giao diện, thông điệp và luồng bán hàng.'
+      'Nhiều doanh nghiệp mắc kẹt giữa vài dòng mô tả, vài file tham khảo và một bản báo giá chưa chứng minh được hướng giao diện hay luồng bán hàng.'
   },
   {
-    title: 'Dựng mẫu đẹp nhưng không chạy được',
+    title: 'Bản mẫu đẹp chưa đủ để vận hành',
     description:
-      'Một landing page chỉ để xem không giải quyết phần quan trọng hơn: form, CRM, chatbot, automation, tracking và quy trình chăm sóc khách.'
+      'Một landing page chỉ để xem không giải quyết được phần quan trọng hơn: form, CRM, chatbot, automation, tracking và quy trình chăm sóc lead.'
   },
   {
-    title: 'Triển khai rời rạc, khó bàn giao',
+    title: 'Triển khai rời rạc làm founder khó kiểm soát',
     description:
-      'Website, dữ liệu khách hàng, kịch bản tư vấn và vận hành thường nằm ở nhiều nơi, khiến chủ doanh nghiệp khó theo dõi hiệu quả.'
+      'Website, dữ liệu khách hàng và logic tư vấn bị tách nhiều nơi, khiến việc tối ưu doanh thu sau launch trở nên chậm và khó đo lường.'
   }
 ];
 
 const processSteps = [
   {
     eyebrow: 'Bước 01',
-    title: 'Bạn mô tả ý tưởng',
+    title: 'Bạn mô tả ý tưởng và mục tiêu thật',
     description:
-      'Ngành nghề, khách hàng mục tiêu, sản phẩm, giọng thương hiệu và mục tiêu kinh doanh. VIETCODE AI biến phần mô tả đó thành brief triển khai rõ ràng.'
+      'Ngành nghề, offer, khách hàng mục tiêu, brand tone và bài toán bán hàng. Brief đủ thật để không biến dự án thành một cuộc trao đổi mơ hồ.'
   },
   {
     eyebrow: 'Bước 02',
-    title: 'AI tạo demo có thể nhìn thấy',
+    title: 'AI dựng concept có thể xem và phản biện',
     description:
-      'Landing page mẫu, hướng logo, màu sắc, bố cục, nội dung chính và luồng chatbot được phác thảo nhanh để bạn đánh giá hướng đi trước khi đầu tư.'
+      'Landing page direction, logo cue, message hierarchy, màu sắc và flow chatbot được tạo ra để bạn thấy hướng đi trước khi bỏ chi phí lớn.'
   },
   {
     eyebrow: 'Bước 03',
-    title: 'Đội ngũ triển khai hệ thống thật',
+    title: 'Đội ngũ biến concept thành hệ thống production',
     description:
-      'Khi concept đã đúng, đội ngũ xây website, CRM, chatbot, automation, domain, tracking, deployment và tài liệu vận hành.'
+      'Website, CRM, chatbot, automation, deployment và tài liệu vận hành được triển khai như một hạ tầng bán hàng thật, không dừng ở màn demo.'
   }
 ];
 
-const packages = [
+const packageGroups = [
   {
     name: 'Starter',
-    fit: 'Phù hợp khi cần ra mắt nhanh một kênh bán hàng gọn gàng.',
+    fit: 'Cho doanh nghiệp cần ra mắt nhanh một bề mặt bán hàng rõ ràng.',
+    outcome: 'Tạo landing page đầu tiên, chốt thông điệp và nhận lead gọn gàng.',
     features: [
       'Landing page theo concept AI',
       'Form nhận lead và thông báo',
-      'Bộ nhận diện cơ bản',
+      'Brand direction cơ bản',
       'Triển khai domain và hosting'
-    ],
-    cta: 'Khởi động nhanh'
+    ]
   },
   {
     name: 'Business',
-    fit: 'Dành cho đội bán hàng cần luồng chăm sóc khách rõ ràng.',
+    fit: 'Cho đội sales cần luồng tư vấn và nuôi lead mạch lạc hơn.',
+    outcome: 'Nối website với CRM, chatbot và automation theo quy trình bán hàng.',
     features: [
       'Website nhiều trang',
       'CRM khách hàng tiềm năng',
-      'Chatbot tư vấn kịch bản',
+      'Chatbot tư vấn theo kịch bản',
       'Automation nhắc việc và phân loại lead'
     ],
-    cta: 'Xây hệ thống bán hàng',
     featured: true
   },
   {
     name: 'Pro AI',
-    fit: 'Cho mô hình cần vận hành, đo lường và mở rộng liên tục.',
+    fit: 'Cho mô hình cần theo dõi, tối ưu và mở rộng liên tục.',
+    outcome: 'Xây hệ thống vận hành sâu hơn với dashboard và logic nội bộ riêng.',
     features: [
       'Dashboard vận hành',
       'Tích hợp công cụ nội bộ',
       'Workflow AI theo nghiệp vụ',
-      'Theo dõi, tối ưu và hỗ trợ mở rộng'
-    ],
-    cta: 'Thiết kế giải pháp riêng'
+      'Theo dõi và hỗ trợ mở rộng'
+    ]
   }
 ];
 
@@ -110,55 +110,72 @@ const deliverables = [
 
 const advantages = [
   {
-    title: 'Từ demo sang code thật',
+    title: 'Demo để ra quyết định nhanh hơn',
     description:
-      'AI dùng để làm rõ hướng đi nhanh hơn. Phần bàn giao cuối vẫn được đội ngũ thiết kế, lập trình và kiểm tra như một sản phẩm vận hành.'
+      'AI giúp nén thời gian từ ý tưởng sang concept nhìn thấy được, để founder chốt hướng nhanh hơn thay vì tranh luận bằng file mô tả.'
   },
   {
-    title: 'Tư duy bán hàng trước giao diện',
+    title: 'Triển khai bám mục tiêu bán hàng',
     description:
-      'Mỗi section, form và chatbot đều phục vụ một hành động cụ thể: hiểu sản phẩm, để lại thông tin, được tư vấn hoặc quay lại chăm sóc.'
+      'Mỗi khối nội dung, form và chatbot đều phục vụ một hành động cụ thể: hiểu offer, để lại lead, đặt lịch hoặc quay lại chăm sóc.'
   },
   {
-    title: 'Có đường mở rộng sau ngày ra mắt',
+    title: 'Có đường nâng cấp sau ngày launch',
     description:
-      'Khi có dữ liệu thật, hệ thống có thể nâng cấp thêm dashboard, tích hợp CRM, automation, phân quyền nội bộ và báo cáo.'
+      'Khi dữ liệu thật bắt đầu chảy về, hệ thống có thể tiến hóa tiếp thành dashboard, automation sâu hơn và quy trình nội bộ có kiểm soát.'
   }
 ];
 
 const faqs = [
   {
-    question: 'VIETCODE AI có chỉ tạo demo bằng AI rồi bàn giao không?',
+    question: 'VIETCODE AI có chỉ tạo demo rồi dừng lại không?',
     answer:
-      'Không. Demo AI là bước giúp hai bên nhìn rõ concept nhanh. Sau đó đội ngũ VIETCODE AI triển khai thành website, CRM, chatbot, automation và hạ tầng thật theo phạm vi đã thống nhất.'
+      'Không. Demo là bước mở đầu để hai bên chốt concept nhanh hơn. Sau đó đội ngũ triển khai website, CRM, chatbot, automation và hạ tầng thật theo phạm vi đã thống nhất.'
   },
   {
-    question: 'Nếu tôi chưa có nội dung hoặc nhận diện thương hiệu thì sao?',
+    question: 'Nếu tôi chưa có nội dung hay nhận diện thương hiệu thì sao?',
     answer:
-      'Bạn chỉ cần mô tả sản phẩm, khách hàng và phong cách mong muốn. VIETCODE AI sẽ đề xuất thông điệp, cấu trúc trang, màu sắc và hướng nhận diện để bạn chọn và chỉnh.'
+      'Bạn chỉ cần mô tả sản phẩm, khách hàng và gu mong muốn. VIETCODE AI sẽ đề xuất cấu trúc trang, thông điệp, màu sắc và hướng nhận diện để bạn chọn.'
   },
   {
-    question: 'Có phù hợp với doanh nghiệp nhỏ không?',
+    question: 'Mô hình nhỏ có phù hợp không?',
     answer:
-      'Có. Gói Starter tập trung vào việc ra mắt nhanh và đo phản hồi thị trường. Khi mô hình bán hàng rõ hơn, hệ thống có thể nâng lên CRM, chatbot và automation.'
+      'Có. Bạn có thể bắt đầu ở mức gọn để ra mắt nhanh, sau đó mở rộng sang CRM, chatbot và automation khi mô hình bán hàng đã rõ dữ liệu hơn.'
   },
   {
-    question: 'Sau khi bàn giao có hỗ trợ vận hành không?',
+    question: 'Sau bàn giao có tiếp tục hỗ trợ không?',
     answer:
-      'Có thể thiết kế theo gói hỗ trợ. Mục tiêu là bàn giao hệ thống đủ rõ để đội của bạn dùng được, đồng thời có phương án tối ưu khi dữ liệu khách hàng bắt đầu phát sinh.'
+      'Có thể thiết kế theo gói hỗ trợ. Mục tiêu là bạn nhận được một hệ thống đủ rõ để tự vận hành, đồng thời có lộ trình tối ưu tiếp khi cần.'
   }
 ];
 
 function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
-    <p className='text-primary text-sm font-semibold tracking-[0.22em] uppercase'>{children}</p>
+    <p className='text-[11px] font-medium tracking-[0.28em] text-emerald-700 uppercase'>
+      {children}
+    </p>
   );
 }
 
-function CheckItem({ children, className }: { children: React.ReactNode; className?: string }) {
+function Shell({ children, className }: { children: React.ReactNode; className?: string }) {
   return (
-    <li className={cn('flex gap-3 text-sm leading-6 text-zinc-700', className)}>
-      <span className='bg-emerald-500/10 text-emerald-700 mt-0.5 inline-flex size-5 shrink-0 items-center justify-center rounded-full'>
+    <div className={cn('rounded-[2rem] bg-black/[0.04] p-1.5 ring-1 ring-black/5', className)}>
+      <div className='rounded-[calc(2rem-0.375rem)] bg-white shadow-[inset_0_1px_0_rgba(255,255,255,0.7)]'>
+        {children}
+      </div>
+    </div>
+  );
+}
+
+function CheckItem({ children, dark }: { children: React.ReactNode; dark?: boolean }) {
+  return (
+    <li className={cn('flex gap-3 text-sm leading-6', dark ? 'text-white/74' : 'text-zinc-700')}>
+      <span
+        className={cn(
+          'mt-0.5 inline-flex size-5 shrink-0 items-center justify-center rounded-full',
+          dark ? 'bg-white/10 text-emerald-300' : 'bg-emerald-500/10 text-emerald-700'
+        )}
+      >
         <Icons.check className='size-3.5' />
       </span>
       <span>{children}</span>
@@ -168,491 +185,654 @@ function CheckItem({ children, className }: { children: React.ReactNode; classNa
 
 export default function HomePage() {
   return (
-    <main className='min-h-screen bg-[#f7fbf8] text-zinc-950'>
-      <header className='sticky top-0 z-50 border-b border-emerald-950/10 bg-[rgba(247,251,248,0.85)] backdrop-blur-xl'>
-        <div className='mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8'>
-          <Link href='/' className='flex items-center gap-3' aria-label='VIETCODE AI home'>
-            <span className='relative inline-flex size-9 items-center justify-center overflow-hidden rounded-xl bg-zinc-950 text-white shadow-[0_16px_38px_rgba(10,20,16,0.22)]'>
-              <span className='absolute inset-0 bg-[radial-gradient(circle_at_28%_20%,rgba(52,211,153,0.9),transparent_42%)]' />
-              <Icons.sparkles className='relative size-4' />
-            </span>
-            <span className='text-base font-semibold tracking-tight'>VIETCODE AI</span>
-          </Link>
+    <main className='min-h-[100dvh] bg-[#f3f1ea] text-zinc-950'>
+      <div className='fixed inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.76),transparent_32%),radial-gradient(circle_at_82%_12%,rgba(114,160,123,0.18),transparent_20%),linear-gradient(180deg,#f3f1ea_0%,#f6f2ea_42%,#efe9dd_100%)]' />
+      <div className='pointer-events-none fixed inset-0 -z-10 opacity-[0.055] [background-image:radial-gradient(#1f2937_0.65px,transparent_0.65px)] [background-size:16px_16px]' />
 
-          <nav className='hidden items-center gap-8 md:flex' aria-label='Main navigation'>
-            {navigationItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className='text-sm font-medium text-zinc-600 transition hover:text-zinc-950'
-              >
-                {item.label}
+      <header className='sticky top-0 z-40 px-4 pt-4 sm:px-6 lg:px-8'>
+        <div className='mx-auto max-w-7xl'>
+          <div className='rounded-full bg-white/72 px-4 py-3 shadow-[0_24px_60px_-28px_rgba(35,35,25,0.34)] ring-1 ring-black/6 backdrop-blur-xl sm:px-6'>
+            <div className='flex items-center justify-between gap-4'>
+              <Link href='/' className='flex items-center gap-3' aria-label='VIETCODE AI home'>
+                <span className='relative inline-flex size-10 items-center justify-center overflow-hidden rounded-full bg-[#111311] text-white'>
+                  <span className='absolute inset-0 bg-[radial-gradient(circle_at_28%_22%,rgba(110,231,183,0.92),transparent_42%)]' />
+                  <Icons.sparkles className='relative size-4' />
+                </span>
+                <div>
+                  <p className='font-medium tracking-tight'>VIETCODE AI</p>
+                  <p className='text-[11px] tracking-[0.24em] text-zinc-500 uppercase'>
+                    demo to deployment
+                  </p>
+                </div>
               </Link>
-            ))}
-          </nav>
 
-          <div className='flex items-center gap-2'>
-            <Button asChild variant='ghost' className='hidden text-zinc-700 sm:inline-flex'>
-              <Link href='/auth/sign-in'>Đăng nhập</Link>
-            </Button>
-            <Button asChild className='bg-zinc-950 text-white hover:bg-zinc-800'>
-              <Link href='#tu-van'>Tư vấn demo</Link>
-            </Button>
+              <nav className='hidden items-center gap-7 md:flex' aria-label='Main navigation'>
+                {navigationItems.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className='text-sm text-zinc-600 transition duration-300 hover:text-zinc-950'
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </nav>
+
+              <div className='flex items-center gap-2'>
+                <Button
+                  asChild
+                  variant='ghost'
+                  className='hidden rounded-full px-5 text-zinc-700 sm:inline-flex'
+                >
+                  <Link href='/auth/sign-in'>Đăng nhập</Link>
+                </Button>
+                <Button
+                  asChild
+                  className='rounded-full bg-[#111311] px-5 text-white shadow-[0_18px_38px_-16px_rgba(17,19,17,0.65)] transition duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] hover:bg-[#1c201c]'
+                >
+                  <Link href='/intake'>Mô tả brief</Link>
+                </Button>
+              </div>
+            </div>
           </div>
         </div>
       </header>
 
-      <section className='relative isolate overflow-hidden'>
-        <div className='absolute inset-0 -z-10 bg-[linear-gradient(115deg,#f7fbf8_0%,#f7fbf8_44%,#e0f8ea_72%,#b8efd2_100%)]' />
-        <div className='absolute top-20 right-[-12rem] -z-10 h-[32rem] w-[32rem] rounded-full bg-emerald-300/35 blur-3xl' />
-        <div className='absolute bottom-0 left-1/2 -z-10 h-56 w-[70rem] -translate-x-1/2 rounded-[100%] bg-white/70 blur-2xl' />
-
-        <div className='mx-auto grid max-w-7xl gap-12 px-4 pt-16 pb-20 sm:px-6 lg:grid-cols-[1.02fr_0.98fr] lg:px-8 lg:pt-24 lg:pb-28'>
-          <div className='flex flex-col justify-center'>
-            <div className='mb-7 inline-flex w-fit items-center gap-2 rounded-full border border-emerald-900/10 bg-white/70 px-3 py-1.5 text-sm font-medium text-emerald-950 shadow-sm backdrop-blur'>
-              <Icons.sparkles className='size-4 text-emerald-600' />
-              Demo AI trước, triển khai thật sau
+      <section className='px-4 pb-20 sm:px-6 lg:px-8 lg:pb-32'>
+        <div className='mx-auto grid max-w-7xl gap-14 pt-10 lg:grid-cols-[0.92fr_1.08fr] lg:gap-10 lg:pt-16'>
+          <div className='flex flex-col justify-between py-6 lg:min-h-[46rem] lg:py-10'>
+            <div>
+              <div className='inline-flex items-center gap-2 rounded-full bg-white/70 px-3 py-1.5 text-[11px] font-medium tracking-[0.26em] text-zinc-700 uppercase ring-1 ring-black/6 backdrop-blur'>
+                <span className='inline-flex size-2 rounded-full bg-emerald-500' />
+                Premium intake system for founders
+              </div>
+              <h1 className='mt-8 max-w-[12ch] font-[var(--font-playfair-display)] text-6xl leading-[0.92] tracking-[-0.05em] text-balance sm:text-7xl lg:text-[6.4rem]'>
+                Một ý tưởng rõ hơn đáng giá hơn một bản báo giá sớm.
+              </h1>
+              <p className='mt-8 max-w-[33rem] text-lg leading-8 text-zinc-700 sm:text-xl'>
+                VIETCODE AI mở đầu bằng một intake flow đủ tinh gọn để founder mô tả đúng điều mình
+                đang bán, rồi dùng AI dựng concept nhìn thấy được trước khi đội ngũ triển khai thành
+                website, CRM, chatbot và automation vận hành thật.
+              </p>
             </div>
-            <h1 className='max-w-4xl text-5xl leading-[0.98] font-semibold tracking-tight text-balance sm:text-6xl lg:text-7xl'>
-              Bạn mô tả ý tưởng. AI tạo demo. VIETCODE AI biến nó thành hệ thống bán hàng thật.
-            </h1>
-            <p className='mt-7 max-w-2xl text-lg leading-8 text-zinc-700 sm:text-xl'>
-              Không bắt đầu bằng một bản báo giá mơ hồ. Chúng tôi giúp bạn nhìn thấy landing page,
-              logo direction, nội dung và chatbot mẫu trước, rồi triển khai website, CRM, automation
-              và vận hành thành sản phẩm dùng được.
-            </p>
-            <div className='mt-9 flex flex-col gap-3 sm:flex-row'>
+
+            <div className='mt-10 flex flex-col gap-4 sm:flex-row'>
               <Button
                 asChild
                 size='lg'
-                className='h-12 rounded-full bg-zinc-950 px-6 text-white shadow-[0_18px_44px_rgba(10,20,16,0.22)] hover:bg-zinc-800'
+                className='h-13 rounded-full bg-[#111311] px-3 text-white shadow-[0_24px_50px_-20px_rgba(17,19,17,0.7)] transition duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:-translate-y-[1px] hover:bg-[#1d211d] active:scale-[0.98]'
               >
-                <Link href='/intake'>
-                  Mô tả ý tưởng của bạn
-                  <Icons.arrowRight className='ml-2 size-4' />
+                <Link href='/intake' className='gap-3'>
+                  <span className='pl-3'>Bắt đầu với brief</span>
+                  <span className='inline-flex size-8 items-center justify-center rounded-full bg-white/10'>
+                    <Icons.arrowRight className='size-4' />
+                  </span>
                 </Link>
               </Button>
               <Button
                 asChild
                 size='lg'
                 variant='outline'
-                className='h-12 rounded-full border-emerald-950/15 bg-white/70 px-6 text-zinc-900 backdrop-blur hover:bg-white'
+                className='h-13 rounded-full border-black/10 bg-white/70 px-6 text-zinc-900 backdrop-blur transition duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:-translate-y-[1px] hover:bg-white active:scale-[0.98]'
               >
-                <Link href='#quy-trinh'>Xem quy trình</Link>
+                <Link href='#quy-trinh'>Xem đường triển khai</Link>
               </Button>
             </div>
-            <ul className='mt-8 grid gap-3 sm:grid-cols-3'>
+
+            <div className='mt-10 grid gap-4 border-t border-black/8 pt-8 sm:grid-cols-3'>
               {credibilityItems.map((item) => (
                 <CheckItem key={item}>{item}</CheckItem>
               ))}
-            </ul>
+            </div>
           </div>
 
-          <div className='relative min-h-[34rem] lg:min-h-[42rem]'>
-            <div className='absolute inset-x-2 top-0 rounded-[2rem] border border-white/70 bg-white/50 p-3 shadow-[0_32px_90px_rgba(7,36,24,0.16)] backdrop-blur-2xl sm:inset-x-8 lg:inset-x-0'>
-              <div className='overflow-hidden rounded-[1.5rem] border border-emerald-950/10 bg-[#07140f] text-white'>
-                <div className='flex items-center justify-between border-b border-white/10 px-5 py-4'>
-                  <div className='flex items-center gap-2'>
-                    <span className='size-2.5 rounded-full bg-rose-400' />
-                    <span className='size-2.5 rounded-full bg-amber-300' />
-                    <span className='size-2.5 rounded-full bg-emerald-400' />
+          <div className='relative lg:min-h-[46rem]'>
+            <div className='absolute inset-0 rounded-[2.5rem] bg-[radial-gradient(circle_at_16%_18%,rgba(255,255,255,0.8),transparent_26%),radial-gradient(circle_at_82%_16%,rgba(122,169,132,0.2),transparent_22%),linear-gradient(145deg,#1b211d_0%,#0e120f_100%)] shadow-[0_40px_100px_-36px_rgba(14,18,15,0.85)]' />
+            <div className='absolute inset-x-0 top-10 bottom-0 grid gap-4 px-3 sm:px-6 lg:grid-cols-[0.78fr_1.22fr]'>
+              <Shell className='self-start lg:translate-y-6'>
+                <div className='rounded-[calc(2rem-0.375rem)] bg-[#f5f1e9] p-6'>
+                  <p className='text-[11px] tracking-[0.24em] text-zinc-500 uppercase'>
+                    Founder intake
+                  </p>
+                  <div className='mt-5 space-y-3'>
+                    {[
+                      'Thẩm mỹ viện tại Đà Nẵng cần tăng lịch hẹn từ web',
+                      'Ưu tiên hình ảnh cao cấp nhưng không xa cách',
+                      'Muốn chatbot hỏi nhu cầu rồi đẩy lead vào CRM',
+                      'Cần ra bản demo trong vài ngày để chốt hướng'
+                    ].map((item) => (
+                      <div
+                        key={item}
+                        className='rounded-[1.25rem] bg-white px-4 py-3 text-sm leading-6 text-zinc-700 shadow-[0_10px_24px_-18px_rgba(0,0,0,0.4)] ring-1 ring-black/5'
+                      >
+                        {item}
+                      </div>
+                    ))}
                   </div>
-                  <span className='text-xs font-medium text-white/50'>
-                    vietcode.ai/demo-builder
-                  </span>
                 </div>
-                <div className='grid gap-0 lg:grid-cols-[0.85fr_1.15fr]'>
-                  <div className='border-b border-white/10 p-5 lg:border-r lg:border-b-0'>
-                    <p className='text-xs font-semibold tracking-[0.2em] text-emerald-300 uppercase'>
-                      Idea brief
-                    </p>
-                    <div className='mt-4 space-y-3'>
-                      {[
-                        'Spa cao cấp tại Đà Nẵng',
-                        'Muốn có landing page đặt lịch',
-                        'Cần chatbot tư vấn liệu trình'
-                      ].map((item) => (
-                        <div
-                          key={item}
-                          className='rounded-2xl border border-white/10 bg-white/[0.06] p-3 text-sm text-white/80'
-                        >
-                          {item}
-                        </div>
-                      ))}
+              </Shell>
+
+              <div className='grid gap-4 pb-4 lg:pb-10'>
+                <Shell className='lg:translate-y-20'>
+                  <div className='overflow-hidden rounded-[calc(2rem-0.375rem)] bg-[#121814] text-white'>
+                    <div className='flex items-center justify-between border-b border-white/10 px-5 py-4'>
+                      <div className='flex items-center gap-2'>
+                        <span className='size-2.5 rounded-full bg-[#ff8175]' />
+                        <span className='size-2.5 rounded-full bg-[#ffcf69]' />
+                        <span className='size-2.5 rounded-full bg-[#6ae39e]' />
+                      </div>
+                      <span className='text-[11px] tracking-[0.24em] text-white/45 uppercase'>
+                        AI concept output
+                      </span>
                     </div>
-                    <div className='mt-5 rounded-2xl bg-emerald-400 p-4 text-emerald-950'>
-                      <p className='text-sm font-semibold'>AI đề xuất</p>
-                      <p className='mt-1 text-sm leading-6'>
-                        Concept thanh lịch, CTA đặt lịch nhanh, chatbot hỏi nhu cầu và chuyển lead
-                        về CRM.
+                    <div className='grid gap-0 xl:grid-cols-[1.1fr_0.9fr]'>
+                      <div className='p-5 sm:p-6'>
+                        <div className='rounded-[1.7rem] bg-[linear-gradient(180deg,rgba(255,255,255,0.97),rgba(237,244,237,0.88))] p-5 text-zinc-950'>
+                          <p className='text-[11px] tracking-[0.22em] text-emerald-800 uppercase'>
+                            SEREN ritual clinic
+                          </p>
+                          <p className='mt-5 max-w-[12ch] font-[var(--font-playfair-display)] text-4xl leading-[0.94] tracking-[-0.05em]'>
+                            Chạm nhẹ để cơ thể được nghỉ đúng cách.
+                          </p>
+                          <div className='mt-7 flex items-center gap-2 text-sm text-zinc-600'>
+                            <span className='rounded-full bg-zinc-950 px-3 py-1 text-white'>
+                              Landing
+                            </span>
+                            <span>Chatbot</span>
+                            <span>CRM</span>
+                          </div>
+                        </div>
+                        <div className='mt-4 grid gap-3 sm:grid-cols-3'>
+                          {['Hero copy', 'Brand cue', 'Lead flow'].map((item) => (
+                            <div
+                              key={item}
+                              className='rounded-[1.25rem] bg-white/5 p-4 ring-1 ring-white/10'
+                            >
+                              <div className='h-1.5 rounded-full bg-emerald-300/85' />
+                              <p className='mt-4 text-sm text-white/70'>{item}</p>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                      <div className='border-t border-white/10 bg-white/[0.04] p-5 sm:p-6 xl:border-t-0 xl:border-l'>
+                        <p className='text-[11px] tracking-[0.22em] text-white/45 uppercase'>
+                          Automation route
+                        </p>
+                        <div className='mt-5 space-y-3'>
+                          {[
+                            'Lead điền nhu cầu và timeline',
+                            'Chatbot gợi ý gói phù hợp',
+                            'CRM phân loại nóng, ấm, lạnh',
+                            'Đội ngũ chốt lịch concept review'
+                          ].map((item, index) => (
+                            <div
+                              key={item}
+                              className='flex gap-3 rounded-[1.25rem] bg-white/[0.05] px-4 py-3 ring-1 ring-white/10'
+                            >
+                              <span className='font-mono text-sm text-emerald-300'>
+                                0{index + 1}
+                              </span>
+                              <p className='text-sm leading-6 text-white/74'>{item}</p>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </Shell>
+
+                <div className='grid gap-4 md:grid-cols-[0.95fr_1.05fr] lg:translate-x-8'>
+                  <Shell>
+                    <div className='rounded-[calc(2rem-0.375rem)] bg-[#efe8dc] p-5'>
+                      <p className='text-[11px] tracking-[0.22em] text-zinc-500 uppercase'>
+                        Founder outcome
+                      </p>
+                      <p className='mt-4 max-w-[18rem] text-2xl leading-tight font-medium tracking-tight text-zinc-950'>
+                        Thấy được concept đủ sớm để quyết định phạm vi đầu tư đúng hơn.
                       </p>
                     </div>
-                  </div>
-                  <div className='bg-[radial-gradient(circle_at_70%_12%,rgba(52,211,153,0.28),transparent_34%),linear-gradient(145deg,#102018,#07140f)] p-5'>
-                    <div className='rounded-[1.25rem] border border-white/10 bg-white/[0.07] p-4 shadow-2xl'>
-                      <div className='h-40 rounded-2xl bg-[linear-gradient(135deg,rgba(255,255,255,0.92),rgba(209,250,229,0.74)),radial-gradient(circle_at_82%_18%,rgba(16,185,129,0.5),transparent_30%)] p-4 text-zinc-950'>
-                        <p className='text-xs font-semibold text-emerald-800'>SEREN SPA</p>
-                        <p className='mt-3 max-w-[13rem] text-2xl leading-7 font-semibold'>
-                          Chạm nhẹ để cơ thể được nghỉ
-                        </p>
-                      </div>
-                      <div className='mt-4 grid grid-cols-3 gap-3'>
-                        {['Logo', 'Tone', 'Copy'].map((item) => (
-                          <div
-                            key={item}
-                            className='rounded-xl border border-white/10 bg-white/[0.06] p-3'
-                          >
-                            <div className='mb-3 h-1.5 rounded-full bg-emerald-300/80' />
-                            <p className='text-xs text-white/60'>{item}</p>
-                          </div>
+                  </Shell>
+                  <Shell>
+                    <div className='rounded-[calc(2rem-0.375rem)] bg-[#101511] p-5 text-white'>
+                      <p className='text-[11px] tracking-[0.22em] text-white/45 uppercase'>
+                        Production layer
+                      </p>
+                      <ul className='mt-4 space-y-3'>
+                        {[
+                          'Website production-ready',
+                          'CRM theo pipeline tư vấn',
+                          'Chatbot gắn ngữ cảnh bán hàng',
+                          'Deployment và tài liệu bàn giao'
+                        ].map((item) => (
+                          <CheckItem key={item} dark>
+                            {item}
+                          </CheckItem>
                         ))}
-                      </div>
-                      <div className='mt-4 rounded-2xl border border-emerald-300/20 bg-emerald-300/10 p-4'>
-                        <div className='mb-3 flex items-center gap-2 text-sm font-semibold text-emerald-200'>
-                          <Icons.chat className='size-4' />
-                          Chatbot flow
-                        </div>
-                        <div className='space-y-2 text-xs text-white/70'>
-                          <p>1. Hỏi nhu cầu chăm sóc</p>
-                          <p>2. Gợi ý liệu trình</p>
-                          <p>3. Gửi lead vào CRM</p>
-                        </div>
-                      </div>
+                      </ul>
                     </div>
-                  </div>
+                  </Shell>
                 </div>
-              </div>
-            </div>
-
-            <div className='absolute right-0 bottom-6 left-8 rounded-[1.5rem] border border-emerald-950/10 bg-white/80 p-5 shadow-[0_24px_70px_rgba(7,36,24,0.14)] backdrop-blur-xl sm:left-20 lg:right-[-1.5rem]'>
-              <div className='flex items-start justify-between gap-4'>
-                <div>
-                  <p className='text-sm font-semibold text-zinc-950'>
-                    Sau demo là hệ thống vận hành
-                  </p>
-                  <p className='mt-1 text-sm leading-6 text-zinc-600'>
-                    Website, CRM, chatbot, automation và deployment nằm trong cùng một lộ trình.
-                  </p>
-                </div>
-                <span className='inline-flex size-10 shrink-0 items-center justify-center rounded-full bg-emerald-500 text-white'>
-                  <Icons.checks className='size-5' />
-                </span>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className='border-y border-emerald-950/10 bg-white'>
-        <div className='mx-auto grid max-w-7xl gap-6 px-4 py-8 sm:px-6 md:grid-cols-3 lg:px-8'>
-          {[
-            ['Input', 'Một đoạn mô tả ngành, sản phẩm, khách hàng và mục tiêu.'],
-            ['Output demo', 'Landing page, logo direction, copy, màu sắc và flow chatbot.'],
-            ['Output thật', 'Website, CRM, automation, deployment và tài liệu vận hành.']
-          ].map(([title, description]) => (
-            <div key={title} className='flex gap-4'>
-              <span className='mt-1 h-8 w-px shrink-0 bg-emerald-500' />
-              <div>
-                <p className='font-semibold text-zinc-950'>{title}</p>
-                <p className='mt-1 text-sm leading-6 text-zinc-600'>{description}</p>
+      <section className='px-4 py-24 sm:px-6 lg:px-8 lg:py-32'>
+        <div className='mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-end'>
+          <div>
+            <SectionLabel>Vấn đề thực tế</SectionLabel>
+            <h2 className='mt-5 max-w-[12ch] font-[var(--font-playfair-display)] text-4xl leading-[0.98] tracking-[-0.04em] sm:text-5xl'>
+              Founder không thiếu ý tưởng. Họ thiếu một bề mặt để nhìn đúng hệ thống mình sắp mua.
+            </h2>
+          </div>
+          <p className='max-w-[40rem] text-lg leading-8 text-zinc-600'>
+            VIETCODE AI dùng lớp demo như một công cụ giảm mơ hồ, nhưng toàn bộ giá trị nằm ở phần
+            triển khai sau đó: dữ liệu, biểu mẫu, chatbot, logic nuôi lead và một đường bàn giao để
+            doanh nghiệp thật sự dùng được.
+          </p>
+        </div>
+
+        <div className='mx-auto mt-14 grid max-w-7xl gap-5 lg:grid-cols-[1.08fr_0.92fr]'>
+          <Shell>
+            <div className='grid gap-0 rounded-[calc(2rem-0.375rem)] bg-white lg:grid-cols-[0.92fr_1.08fr]'>
+              <div className='border-b border-black/6 p-8 lg:border-r lg:border-b-0'>
+                <p className='text-[11px] tracking-[0.24em] text-zinc-500 uppercase'>
+                  Tình huống thường gặp
+                </p>
+                <p className='mt-4 max-w-[16rem] text-3xl leading-tight font-medium tracking-tight'>
+                  Giao diện được làm trước khi logic bán hàng được hiểu đủ sâu.
+                </p>
+              </div>
+              <div className='divide-y divide-black/6'>
+                {painPoints.map((item, index) => (
+                  <article key={item.title} className='p-8'>
+                    <p className='font-mono text-sm text-emerald-700'>0{index + 1}</p>
+                    <h3 className='mt-3 text-2xl leading-tight font-medium tracking-tight'>
+                      {item.title}
+                    </h3>
+                    <p className='mt-4 max-w-[34rem] leading-7 text-zinc-600'>{item.description}</p>
+                  </article>
+                ))}
               </div>
             </div>
-          ))}
+          </Shell>
+
+          <div className='grid gap-5'>
+            <Shell>
+              <div className='rounded-[calc(2rem-0.375rem)] bg-[#181d19] p-8 text-white'>
+                <p className='text-[11px] tracking-[0.24em] text-white/45 uppercase'>
+                  What changes
+                </p>
+                <p className='mt-4 max-w-[18rem] font-[var(--font-playfair-display)] text-4xl leading-[1.02] tracking-[-0.04em]'>
+                  Thấy sớm. Sửa sớm. Chốt đúng.
+                </p>
+                <p className='mt-5 max-w-[22rem] leading-7 text-white/70'>
+                  Khi concept được dựng đủ thật, founder ra quyết định bằng thứ có thể xem và phản
+                  biện, không phải bằng mô tả trừu tượng.
+                </p>
+              </div>
+            </Shell>
+            <Shell>
+              <div className='rounded-[calc(2rem-0.375rem)] bg-[#efe6d7] p-8'>
+                <p className='text-[11px] tracking-[0.24em] text-zinc-500 uppercase'>
+                  Measured outcome
+                </p>
+                <div className='mt-5 grid gap-5 sm:grid-cols-3'>
+                  {[
+                    ['01', 'Brief rõ hơn'],
+                    ['02', 'Concept nhanh hơn'],
+                    ['03', 'Launch có kiểm soát']
+                  ].map(([number, label]) => (
+                    <div key={number}>
+                      <p className='font-mono text-sm text-zinc-500'>{number}</p>
+                      <p className='mt-2 text-lg leading-7 font-medium tracking-tight'>{label}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </Shell>
+          </div>
         </div>
       </section>
 
-      <section className='bg-white px-4 py-24 sm:px-6 lg:px-8'>
+      <section id='quy-trinh' className='px-4 py-24 sm:px-6 lg:px-8 lg:py-32'>
         <div className='mx-auto max-w-7xl'>
-          <div className='grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-end'>
+          <div className='grid gap-10 lg:grid-cols-[0.78fr_1.22fr]'>
             <div>
-              <SectionLabel>Vấn đề thực tế</SectionLabel>
-              <h2 className='mt-4 max-w-2xl text-4xl leading-tight font-semibold tracking-tight text-balance sm:text-5xl'>
-                Doanh nghiệp không thiếu ý tưởng. Thứ thiếu là một cách biến ý tưởng thành hệ thống
-                có thể bán hàng.
+              <SectionLabel>Quy trình</SectionLabel>
+              <h2 className='mt-5 max-w-[10ch] font-[var(--font-playfair-display)] text-4xl leading-[0.98] tracking-[-0.04em] sm:text-5xl'>
+                Một đường đi có thứ tự, không phải chuỗi họp kéo dài.
               </h2>
+              <p className='mt-6 max-w-[26rem] text-lg leading-8 text-zinc-600'>
+                Mỗi bước tạo ra một quyết định rõ: mô tả điều gì, nhìn thấy điều gì và khi nào triển
+                khai production.
+              </p>
             </div>
-            <p className='text-lg leading-8 text-zinc-600'>
-              VIETCODE AI đặt bước demo ở đầu quy trình để giảm mơ hồ, nhưng không dừng ở bản mẫu.
-              Mỗi concept được nối tiếp bằng phần triển khai thật: dữ liệu, form, chatbot, quy trình
-              chăm sóc và vận hành sau khi ra mắt.
-            </p>
-          </div>
 
-          <div className='mt-14 grid gap-5 md:grid-cols-3'>
-            {painPoints.map((item, index) => (
-              <article
-                key={item.title}
-                className='rounded-[1.5rem] border border-zinc-200 bg-zinc-50 p-6 shadow-sm'
-              >
-                <span className='text-sm font-semibold text-emerald-700'>0{index + 1}</span>
-                <h3 className='mt-5 text-xl font-semibold tracking-tight text-zinc-950'>
-                  {item.title}
-                </h3>
-                <p className='mt-3 text-sm leading-7 text-zinc-600'>{item.description}</p>
-              </article>
-            ))}
+            <div className='space-y-5'>
+              {processSteps.map((step) => (
+                <Shell key={step.title}>
+                  <article className='rounded-[calc(2rem-0.375rem)] bg-white p-8'>
+                    <div className='grid gap-5 md:grid-cols-[0.36fr_0.64fr]'>
+                      <div>
+                        <p className='text-[11px] tracking-[0.24em] text-emerald-700 uppercase'>
+                          {step.eyebrow}
+                        </p>
+                        <h3 className='mt-4 text-2xl leading-tight font-medium tracking-tight text-zinc-950'>
+                          {step.title}
+                        </h3>
+                      </div>
+                      <p className='max-w-[34rem] text-base leading-7 text-zinc-600'>
+                        {step.description}
+                      </p>
+                    </div>
+                  </article>
+                </Shell>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
       <section
-        id='quy-trinh'
-        className='relative overflow-hidden bg-[#07140f] px-4 py-24 text-white sm:px-6 lg:px-8'
+        id='goi-dich-vu'
+        className='bg-[#111311] px-4 py-24 text-white sm:px-6 lg:px-8 lg:py-32'
       >
-        <div className='absolute inset-0 bg-[radial-gradient(circle_at_15%_0%,rgba(52,211,153,0.28),transparent_31%),radial-gradient(circle_at_80%_18%,rgba(134,239,172,0.12),transparent_28%)]' />
-        <div className='relative mx-auto max-w-7xl'>
-          <div className='grid gap-12 lg:grid-cols-[0.8fr_1.2fr]'>
-            <div>
-              <p className='text-sm font-semibold tracking-[0.22em] text-emerald-300 uppercase'>
-                Quy trình
-              </p>
-              <h2 className='mt-4 text-4xl leading-tight font-semibold tracking-tight text-balance sm:text-5xl'>
-                Một đường đi rõ: mô tả, nhìn thấy, rồi triển khai.
-              </h2>
-              <p className='mt-6 text-lg leading-8 text-white/70'>
-                Mỗi bước tạo ra một quyết định cụ thể. Không kéo dài bằng những cuộc họp không đầu
-                ra, cũng không ép bạn mua một hệ thống khi chưa thấy hướng đi.
-              </p>
-            </div>
-
-            <div className='space-y-4'>
-              {processSteps.map((step) => (
-                <article
-                  key={step.title}
-                  className='group rounded-[1.5rem] border border-white/10 bg-white/[0.06] p-6 shadow-[0_22px_70px_rgba(0,0,0,0.18)] backdrop-blur transition hover:bg-white/[0.09]'
-                >
-                  <p className='text-sm font-semibold text-emerald-300'>{step.eyebrow}</p>
-                  <div className='mt-3 grid gap-4 md:grid-cols-[0.42fr_0.58fr]'>
-                    <h3 className='text-2xl font-semibold tracking-tight'>{step.title}</h3>
-                    <p className='leading-7 text-white/70'>{step.description}</p>
-                  </div>
-                </article>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id='goi-dich-vu' className='bg-[#f7fbf8] px-4 py-24 sm:px-6 lg:px-8'>
         <div className='mx-auto max-w-7xl'>
-          <div className='mx-auto max-w-3xl text-center'>
-            <SectionLabel>Gói dịch vụ</SectionLabel>
-            <h2 className='mt-4 text-4xl leading-tight font-semibold tracking-tight text-balance sm:text-5xl'>
-              Chọn mức triển khai theo độ chín của mô hình bán hàng.
-            </h2>
-            <p className='mt-5 text-lg leading-8 text-zinc-600'>
-              Không cần mua mọi thứ ngay từ đầu. Bắt đầu bằng demo và mở rộng khi bạn đã có dữ liệu,
-              phản hồi và nhu cầu vận hành rõ hơn.
+          <div className='grid gap-8 lg:grid-cols-[0.82fr_1.18fr] lg:items-end'>
+            <div>
+              <SectionLabel>Gói dịch vụ</SectionLabel>
+              <h2 className='mt-5 max-w-[12ch] font-[var(--font-playfair-display)] text-4xl leading-[0.98] tracking-[-0.04em] text-white sm:text-5xl'>
+                Mức triển khai thay đổi theo độ chín của mô hình bán hàng.
+              </h2>
+            </div>
+            <p className='max-w-[40rem] text-lg leading-8 text-white/68'>
+              Bạn không cần mua cả hệ thống ngay trong ngày đầu. Có thể bắt đầu gọn, kiểm tra phản
+              hồi thị trường, rồi mở rộng sang CRM, automation và dashboard khi cần.
             </p>
           </div>
 
-          <div className='mt-14 grid gap-5 lg:grid-cols-3'>
-            {packages.map((item) => (
-              <article
-                key={item.name}
-                className={cn(
-                  'relative rounded-[1.75rem] border p-6 shadow-sm',
-                  item.featured
-                    ? 'border-emerald-500/35 bg-zinc-950 text-white shadow-[0_34px_90px_rgba(7,36,24,0.2)]'
-                    : 'border-emerald-950/10 bg-white'
-                )}
-              >
-                {item.featured ? (
-                  <span className='absolute top-5 right-5 rounded-full bg-emerald-400 px-3 py-1 text-xs font-semibold text-emerald-950'>
-                    Đề xuất
-                  </span>
-                ) : null}
-                <h3 className='text-2xl font-semibold tracking-tight'>{item.name}</h3>
-                <p
-                  className={cn(
-                    'mt-4 min-h-16 leading-7',
-                    item.featured ? 'text-white/70' : 'text-zinc-600'
-                  )}
-                >
-                  {item.fit}
+          <div className='mt-14 grid gap-5 xl:grid-cols-[0.88fr_1.12fr]'>
+            <Shell className='bg-white/6 ring-white/10'>
+              <div className='rounded-[calc(2rem-0.375rem)] bg-[#181c18] p-8'>
+                <p className='text-[11px] tracking-[0.24em] text-white/45 uppercase'>
+                  Operating principle
                 </p>
-                <ul className='mt-7 space-y-3'>
-                  {item.features.map((feature) => (
-                    <CheckItem
-                      key={feature}
-                      className={item.featured ? 'text-white/80' : undefined}
-                    >
-                      {feature}
+                <p className='mt-4 max-w-[16rem] font-[var(--font-playfair-display)] text-4xl leading-[1.02] tracking-[-0.04em]'>
+                  Demo trước để founder thấy đúng thứ mình đang mua.
+                </p>
+                <ul className='mt-8 space-y-3'>
+                  {[
+                    'Khởi động bằng brief đủ thật',
+                    'Tạo concept có thể phản biện',
+                    'Chốt phạm vi trước khi code sâu',
+                    'Nâng cấp tiếp khi dữ liệu đã về'
+                  ].map((item) => (
+                    <CheckItem key={item} dark>
+                      {item}
                     </CheckItem>
                   ))}
                 </ul>
-                <Button
-                  asChild
-                  className={cn(
-                    'mt-8 w-full rounded-full',
+              </div>
+            </Shell>
+
+            <div className='grid gap-5 md:grid-cols-3'>
+              {packageGroups.map((item) => (
+                <Shell
+                  key={item.name}
+                  className={
                     item.featured
-                      ? 'bg-emerald-400 text-emerald-950 hover:bg-emerald-300'
-                      : 'bg-zinc-950 text-white hover:bg-zinc-800'
-                  )}
+                      ? 'bg-emerald-300/16 ring-emerald-300/18'
+                      : 'bg-white/6 ring-white/10'
+                  }
                 >
-                  <Link href='#tu-van'>{item.cta}</Link>
-                </Button>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section id='ban-giao' className='bg-white px-4 py-24 sm:px-6 lg:px-8'>
-        <div className='mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1fr_1fr] lg:items-center'>
-          <div>
-            <SectionLabel>Bàn giao</SectionLabel>
-            <h2 className='mt-4 text-4xl leading-tight font-semibold tracking-tight text-balance sm:text-5xl'>
-              Không chỉ là giao diện đẹp. Bạn nhận một bộ phận bán hàng số có thể vận hành.
-            </h2>
-            <p className='mt-6 text-lg leading-8 text-zinc-600'>
-              Mỗi dự án được đóng gói theo mục tiêu kinh doanh: thu lead, tư vấn, phân loại khách,
-              nhắc việc, theo dõi và cải tiến. Phạm vi có thể gọn hoặc sâu, nhưng phải rõ đường dùng
-              sau ngày launch.
-            </p>
-          </div>
-
-          <div className='rounded-[2rem] border border-emerald-950/10 bg-[#f7fbf8] p-4 shadow-[0_30px_80px_rgba(7,36,24,0.08)]'>
-            <div className='rounded-[1.5rem] bg-white p-6'>
-              <div className='mb-6 flex items-center justify-between gap-4'>
-                <div>
-                  <p className='text-sm font-semibold text-emerald-700'>Delivery board</p>
-                  <p className='mt-1 text-sm text-zinc-500'>Concept đến vận hành</p>
-                </div>
-                <span className='inline-flex size-11 items-center justify-center rounded-full bg-zinc-950 text-white'>
-                  <Icons.dashboard className='size-5' />
-                </span>
-              </div>
-              <div className='grid gap-3 sm:grid-cols-2'>
-                {deliverables.map((item) => (
-                  <div
-                    key={item}
-                    className='rounded-2xl border border-zinc-200 bg-zinc-50 p-4 text-sm leading-6 text-zinc-700'
+                  <article
+                    className={cn(
+                      'rounded-[calc(2rem-0.375rem)] p-6 h-full',
+                      item.featured ? 'bg-[#efe6d7] text-zinc-950' : 'bg-[#181c18] text-white'
+                    )}
                   >
-                    <Icons.circleCheck className='mb-3 size-5 text-emerald-600' />
-                    {item}
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className='bg-[#ecf8f0] px-4 py-24 sm:px-6 lg:px-8'>
-        <div className='mx-auto max-w-7xl'>
-          <div className='grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start'>
-            <div>
-              <SectionLabel>Lợi thế vận hành</SectionLabel>
-              <h2 className='mt-4 text-4xl leading-tight font-semibold tracking-tight text-balance sm:text-5xl'>
-                AI giúp khởi động nhanh. Đội ngũ giúp hệ thống đứng vững.
-              </h2>
-            </div>
-            <div className='grid gap-4'>
-              {advantages.map((item) => (
-                <article
-                  key={item.title}
-                  className='rounded-[1.5rem] bg-white/75 p-6 shadow-sm ring-1 ring-emerald-950/10 backdrop-blur'
-                >
-                  <h3 className='text-xl font-semibold tracking-tight'>{item.title}</h3>
-                  <p className='mt-3 leading-7 text-zinc-600'>{item.description}</p>
-                </article>
+                    <div className='flex items-start justify-between gap-3'>
+                      <div>
+                        <p
+                          className={cn(
+                            'text-[11px] tracking-[0.24em] uppercase',
+                            item.featured ? 'text-zinc-500' : 'text-white/45'
+                          )}
+                        >
+                          Package
+                        </p>
+                        <h3 className='mt-3 text-2xl leading-tight font-medium tracking-tight'>
+                          {item.name}
+                        </h3>
+                      </div>
+                      {item.featured ? (
+                        <span className='rounded-full bg-zinc-950 px-3 py-1 text-[11px] tracking-[0.2em] text-white uppercase'>
+                          Recommended
+                        </span>
+                      ) : null}
+                    </div>
+                    <p
+                      className={cn(
+                        'mt-4 text-sm leading-7',
+                        item.featured ? 'text-zinc-700' : 'text-white/66'
+                      )}
+                    >
+                      {item.fit}
+                    </p>
+                    <p
+                      className={cn(
+                        'mt-4 text-base leading-7',
+                        item.featured ? 'text-zinc-950' : 'text-white/82'
+                      )}
+                    >
+                      {item.outcome}
+                    </p>
+                    <ul className='mt-6 space-y-3'>
+                      {item.features.map((feature) => (
+                        <CheckItem key={feature} dark={!item.featured}>
+                          {feature}
+                        </CheckItem>
+                      ))}
+                    </ul>
+                    <Button
+                      asChild
+                      className={cn(
+                        'mt-8 w-full rounded-full transition duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:-translate-y-[1px] active:scale-[0.98]',
+                        item.featured
+                          ? 'bg-zinc-950 text-white hover:bg-zinc-800'
+                          : 'bg-white text-zinc-950 hover:bg-white/90'
+                      )}
+                    >
+                      <Link href='/intake'>Mô tả nhu cầu</Link>
+                    </Button>
+                  </article>
+                </Shell>
               ))}
             </div>
           </div>
         </div>
       </section>
 
-      <section id='faq' className='bg-white px-4 py-24 sm:px-6 lg:px-8'>
-        <div className='mx-auto max-w-4xl'>
-          <div className='text-center'>
-            <SectionLabel>FAQ</SectionLabel>
-            <h2 className='mt-4 text-4xl leading-tight font-semibold tracking-tight text-balance sm:text-5xl'>
-              Những câu hỏi thường gặp trước khi bắt đầu.
+      <section id='ban-giao' className='px-4 py-24 sm:px-6 lg:px-8 lg:py-32'>
+        <div className='mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.84fr_1.16fr] lg:items-start'>
+          <div>
+            <SectionLabel>Bàn giao</SectionLabel>
+            <h2 className='mt-5 max-w-[12ch] font-[var(--font-playfair-display)] text-4xl leading-[0.98] tracking-[-0.04em] sm:text-5xl'>
+              Founder không nhận một mockup đẹp. Founder nhận một hệ thống có đường dùng sau ngày
+              launch.
             </h2>
+            <p className='mt-6 max-w-[28rem] text-lg leading-8 text-zinc-600'>
+              Phạm vi có thể gọn hoặc sâu, nhưng luôn phải đủ rõ để đội sales, đội vận hành hoặc
+              chính founder biết cách chạy tiếp sau khi dự án lên production.
+            </p>
           </div>
-          <div className='mt-12 divide-y divide-zinc-200 rounded-[1.5rem] border border-zinc-200 bg-zinc-50'>
-            {faqs.map((item) => (
-              <details
-                key={item.question}
-                className='group p-6 open:bg-white first:rounded-t-[1.5rem] last:rounded-b-[1.5rem]'
-              >
-                <summary className='flex cursor-pointer list-none items-center justify-between gap-6 text-left text-lg font-semibold tracking-tight'>
-                  {item.question}
-                  <Icons.chevronDown className='size-5 shrink-0 text-zinc-500 transition group-open:rotate-180' />
-                </summary>
-                <p className='mt-4 max-w-3xl leading-7 text-zinc-600'>{item.answer}</p>
-              </details>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      <section id='tu-van' className='bg-[#07140f] px-4 py-20 text-white sm:px-6 lg:px-8'>
-        <div className='mx-auto max-w-7xl overflow-hidden rounded-[2rem] border border-white/10 bg-[radial-gradient(circle_at_15%_20%,rgba(52,211,153,0.25),transparent_30%),linear-gradient(135deg,rgba(255,255,255,0.08),rgba(255,255,255,0.02))] p-6 shadow-[0_40px_100px_rgba(0,0,0,0.24)] sm:p-10 lg:p-14'>
-          <div className='grid gap-10 lg:grid-cols-[1fr_0.8fr] lg:items-center'>
-            <div>
-              <p className='text-sm font-semibold tracking-[0.22em] text-emerald-300 uppercase'>
-                Bắt đầu bằng một brief ngắn
-              </p>
-              <h2 className='mt-4 text-4xl leading-tight font-semibold tracking-tight text-balance sm:text-5xl'>
-                Gửi ý tưởng, nhận hướng demo, rồi quyết định phạm vi triển khai thật.
-              </h2>
-              <p className='mt-5 text-lg leading-8 text-white/70'>
-                Hãy mô tả sản phẩm, khách hàng và mục tiêu bán hàng của bạn. VIETCODE AI sẽ giúp
-                biến phần mơ hồ thành concept có thể xem, sửa và triển khai.
-              </p>
-            </div>
-            <div className='rounded-[1.5rem] border border-white/10 bg-white/[0.06] p-5 backdrop-blur'>
-              <div className='space-y-3'>
-                {[
-                  'Tôi đang bán gì?',
-                  'Khách hàng cần tin điều gì?',
-                  'Hệ thống cần tự động hóa phần nào?'
-                ].map((item) => (
-                  <div
-                    key={item}
-                    className='rounded-2xl border border-white/10 bg-white/[0.06] px-4 py-3 text-sm text-white/75'
-                  >
-                    {item}
+          <Shell>
+            <div className='grid gap-0 rounded-[calc(2rem-0.375rem)] bg-white md:grid-cols-[0.44fr_0.56fr]'>
+              <div className='border-b border-black/6 p-8 md:border-r md:border-b-0'>
+                <p className='text-[11px] tracking-[0.24em] text-zinc-500 uppercase'>
+                  Delivery board
+                </p>
+                <p className='mt-4 max-w-[14rem] text-3xl leading-tight font-medium tracking-tight'>
+                  Concept đến vận hành trong cùng một lộ trình.
+                </p>
+              </div>
+              <div className='grid gap-3 p-6 sm:grid-cols-2'>
+                {deliverables.map((item) => (
+                  <div key={item} className='rounded-[1.4rem] bg-[#f5f1e9] p-4 ring-1 ring-black/5'>
+                    <Icons.circleCheck className='size-5 text-emerald-700' />
+                    <p className='mt-3 text-sm leading-6 text-zinc-700'>{item}</p>
                   </div>
                 ))}
               </div>
-              <Button
-                asChild
-                size='lg'
-                className='mt-5 h-12 w-full rounded-full bg-emerald-400 text-emerald-950 hover:bg-emerald-300'
-              >
-                <Link href='/auth/sign-up'>
-                  Tạo tài khoản để trao đổi
-                  <Icons.arrowRight className='ml-2 size-4' />
-                </Link>
-              </Button>
-              <p className='mt-4 text-center text-xs leading-5 text-white/50'>
-                Hoặc đăng nhập dashboard nếu bạn đã có workspace VIETCODE AI.
-              </p>
+            </div>
+          </Shell>
+        </div>
+      </section>
+
+      <section className='bg-[#e9e3d5] px-4 py-24 sm:px-6 lg:px-8 lg:py-32'>
+        <div className='mx-auto max-w-7xl'>
+          <div className='grid gap-8 lg:grid-cols-[0.84fr_1.16fr] lg:items-start'>
+            <div>
+              <SectionLabel>Lợi thế vận hành</SectionLabel>
+              <h2 className='mt-5 max-w-[11ch] font-[var(--font-playfair-display)] text-4xl leading-[0.98] tracking-[-0.04em] sm:text-5xl'>
+                AI giúp khởi động đủ nhanh. Đội ngũ giúp hệ thống đứng đủ vững.
+              </h2>
+            </div>
+            <div className='grid gap-5'>
+              {advantages.map((item, index) => (
+                <Shell key={item.title}>
+                  <article className='rounded-[calc(2rem-0.375rem)] bg-white p-8'>
+                    <div className='grid gap-4 md:grid-cols-[0.18fr_0.82fr]'>
+                      <p className='font-mono text-sm text-zinc-400'>0{index + 1}</p>
+                      <div>
+                        <h3 className='text-2xl leading-tight font-medium tracking-tight'>
+                          {item.title}
+                        </h3>
+                        <p className='mt-4 max-w-[38rem] leading-7 text-zinc-600'>
+                          {item.description}
+                        </p>
+                      </div>
+                    </div>
+                  </article>
+                </Shell>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      <footer className='border-t border-emerald-950/10 bg-[#f7fbf8] px-4 py-10 sm:px-6 lg:px-8'>
-        <div className='mx-auto flex max-w-7xl flex-col gap-6 md:flex-row md:items-center md:justify-between'>
+      <section id='faq' className='px-4 py-24 sm:px-6 lg:px-8 lg:py-32'>
+        <div className='mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.72fr_1.28fr]'>
           <div>
-            <p className='font-semibold tracking-tight'>VIETCODE AI</p>
+            <SectionLabel>FAQ</SectionLabel>
+            <h2 className='mt-5 max-w-[10ch] font-[var(--font-playfair-display)] text-4xl leading-[0.98] tracking-[-0.04em] sm:text-5xl'>
+              Những câu hỏi xuất hiện trước khi founder gửi brief.
+            </h2>
+          </div>
+          <Shell>
+            <div className='divide-y divide-black/6 rounded-[calc(2rem-0.375rem)] bg-white'>
+              {faqs.map((item) => (
+                <details
+                  key={item.question}
+                  className='group p-7 first:rounded-t-[calc(2rem-0.375rem)] last:rounded-b-[calc(2rem-0.375rem)] open:bg-[#fbfaf6]'
+                >
+                  <summary className='flex cursor-pointer list-none items-center justify-between gap-6 text-left text-xl leading-tight font-medium tracking-tight'>
+                    {item.question}
+                    <span className='inline-flex size-8 shrink-0 items-center justify-center rounded-full bg-black/[0.04] text-zinc-600 transition duration-500 group-open:rotate-180'>
+                      <Icons.chevronDown className='size-4' />
+                    </span>
+                  </summary>
+                  <p className='mt-4 max-w-[42rem] leading-7 text-zinc-600'>{item.answer}</p>
+                </details>
+              ))}
+            </div>
+          </Shell>
+        </div>
+      </section>
+
+      <section id='tu-van' className='px-4 pb-24 sm:px-6 lg:px-8 lg:pb-32'>
+        <div className='mx-auto max-w-7xl'>
+          <Shell className='bg-[#151915] ring-black/10'>
+            <div className='rounded-[calc(2rem-0.375rem)] bg-[radial-gradient(circle_at_14%_14%,rgba(84,165,112,0.22),transparent_26%),linear-gradient(135deg,#151915_0%,#0e110f_100%)] p-8 text-white sm:p-10 lg:p-14'>
+              <div className='grid gap-8 lg:grid-cols-[1fr_0.82fr] lg:items-end'>
+                <div>
+                  <p className='text-[11px] tracking-[0.26em] text-emerald-300 uppercase'>
+                    Bắt đầu bằng intake
+                  </p>
+                  <h2 className='mt-5 max-w-[12ch] font-[var(--font-playfair-display)] text-4xl leading-[0.98] tracking-[-0.04em] text-balance sm:text-5xl'>
+                    Gửi ý tưởng khi nó còn đang mơ hồ. Chúng tôi biến nó thành thứ có thể xem và
+                    triển khai.
+                  </h2>
+                  <p className='mt-6 max-w-[36rem] text-lg leading-8 text-white/70'>
+                    Hãy mô tả sản phẩm, khách hàng và mục tiêu bán hàng. `/intake` là bước để
+                    VIETCODE AI hiểu đúng bài toán trước khi tạo concept và đề xuất lộ trình
+                    execution.
+                  </p>
+                </div>
+                <div className='rounded-[1.8rem] bg-white/[0.06] p-5 ring-1 ring-white/10 backdrop-blur'>
+                  <div className='space-y-3'>
+                    {[
+                      'Bạn đang bán điều gì và cho ai?',
+                      'Khách hàng cần tin điều gì trước khi để lại lead?',
+                      'Hệ thống cần tự động hóa phần nào ngay từ vòng đầu?',
+                      'Founder muốn demo mức nào trước khi quyết định phạm vi?'
+                    ].map((item) => (
+                      <div
+                        key={item}
+                        className='rounded-[1.2rem] bg-white/[0.05] px-4 py-3 text-sm leading-6 text-white/72 ring-1 ring-white/10'
+                      >
+                        {item}
+                      </div>
+                    ))}
+                  </div>
+                  <Button
+                    asChild
+                    size='lg'
+                    className='mt-5 h-13 w-full rounded-full bg-[#efe6d7] text-zinc-950 transition duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] hover:-translate-y-[1px] hover:bg-[#f6eee0] active:scale-[0.98]'
+                  >
+                    <Link href='/intake' className='gap-3'>
+                      <span className='pl-3'>Mở form intake</span>
+                      <span className='inline-flex size-8 items-center justify-center rounded-full bg-black/5'>
+                        <Icons.arrowRight className='size-4' />
+                      </span>
+                    </Link>
+                  </Button>
+                  <div className='mt-4 flex flex-wrap gap-x-4 gap-y-2 text-xs tracking-[0.18em] text-white/42 uppercase'>
+                    <span>Landing</span>
+                    <span>CRM</span>
+                    <span>Chatbot</span>
+                    <span>Automation</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Shell>
+        </div>
+      </section>
+
+      <footer className='border-t border-black/8 px-4 py-10 sm:px-6 lg:px-8'>
+        <div className='mx-auto flex max-w-7xl flex-col gap-6 md:flex-row md:items-end md:justify-between'>
+          <div>
+            <p className='font-medium tracking-tight'>VIETCODE AI</p>
             <p className='mt-2 max-w-xl text-sm leading-6 text-zinc-600'>
-              Bạn mô tả ý tưởng - AI tạo demo - đội ngũ VIETCODE AI triển khai thành hệ thống bán
-              hàng thật.
+              Bạn mô tả ý tưởng. AI dựng concept. Đội ngũ triển khai thành website, CRM, chatbot và
+              hệ thống bán hàng thật.
             </p>
           </div>
-          <div className='flex flex-wrap gap-4 text-sm font-medium text-zinc-600'>
+          <div className='flex flex-wrap gap-4 text-sm text-zinc-600'>
             {navigationItems.map((item) => (
-              <Link key={item.href} href={item.href} className='hover:text-zinc-950'>
+              <Link key={item.href} href={item.href} className='transition hover:text-zinc-950'>
                 {item.label}
               </Link>
             ))}
-            <Link href='/privacy-policy' className='hover:text-zinc-950'>
+            <Link href='/privacy-policy' className='transition hover:text-zinc-950'>
               Privacy
+            </Link>
+            <Link href='/terms-of-service' className='transition hover:text-zinc-950'>
+              Terms
             </Link>
           </div>
         </div>
