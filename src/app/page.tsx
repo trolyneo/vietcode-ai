@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { redirect } from 'next/navigation';
 
 export const metadata: Metadata = {
   title: 'VIETCODE AI',
@@ -6,5 +7,5 @@ export const metadata: Metadata = {
 };
 
 export default function HomePage() {
-  return <main className='min-h-screen bg-white' />;
+  redirect('/auth/sign-in');
 }
