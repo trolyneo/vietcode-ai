@@ -177,6 +177,8 @@ bun run dev          # Starts at http://localhost:3000
 
 # Build for production
 bun run build
+# npm fallback uses webpack build because Turbopack can exceed memory in constrained sandboxes
+npm run build
 
 # Start production server
 bun run start

@@ -13,9 +13,15 @@ const baseConfig: NextConfig = {
       }
     ]
   },
-  transpilePackages: ['geist'],
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production'
+  },
+  productionBrowserSourceMaps: false,
+  enablePrerenderSourceMaps: false,
+  experimental: {
+    webpackBuildWorker: false,
+    webpackMemoryOptimizations: true,
+    serverSourceMaps: false
   }
 };
 
